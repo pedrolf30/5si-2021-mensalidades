@@ -8,6 +8,7 @@
 
   ## Layout
   > Em breve
+
   ![Screen 1]()
 
   ![Screen 2]()
@@ -66,9 +67,9 @@
   
   ## Faça login utilizando uma das contas de usuário abaixo
   
-  - administrador - User: xxx | Password: xxx
-  - funcionário - User: xxx | Password: xxx
-  - aluno - User: xxx | Password: xxx
+  - administrador - Email: admin@admin.com | Password: admin123
+  - funcionário - Email: samuel.cezar@email.com | Password: samuel123
+  - aluno - Email: aluno.exemplo@email.com | Password: aluno123
   
   > Você também pode utilizar outra conta de usuário do arquivo database.sql ou criar sua
   própria conta no ambiente SQL que você estiver utilizando
