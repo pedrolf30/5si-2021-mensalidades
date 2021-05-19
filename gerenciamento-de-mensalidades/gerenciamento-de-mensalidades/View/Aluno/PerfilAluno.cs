@@ -50,6 +50,12 @@ namespace gerenciamento_de_mensalidades.View.Aluno
             txbContato.ReadOnly = false;
             txbEmail.ReadOnly = false;
 
+            txbNome.Enabled = true;
+            txbRA.Enabled = true;
+            txbCPF.Enabled = true;
+            txbContato.Enabled = true;
+            txbEmail.Enabled = true;
+
             btnEditarPessoa.Visible = false;
             btnSalvarPessoa.Visible = true;
         }

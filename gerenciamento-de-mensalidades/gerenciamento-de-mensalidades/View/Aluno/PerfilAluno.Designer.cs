@@ -244,6 +244,7 @@
             // txbNascimento
             // 
             this.txbNascimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbNascimento.Enabled = false;
             this.txbNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNascimento.ForeColor = System.Drawing.SystemColors.Control;
             this.txbNascimento.Location = new System.Drawing.Point(103, 115);
@@ -258,7 +259,7 @@
             this.cbCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCurso.ForeColor = System.Drawing.SystemColors.Control;
             this.cbCurso.FormattingEnabled = true;
-            this.cbCurso.Location = new System.Drawing.Point(146, 142);
+            this.cbCurso.Location = new System.Drawing.Point(145, 141);
             this.cbCurso.Name = "cbCurso";
             this.cbCurso.Size = new System.Drawing.Size(186, 21);
             this.cbCurso.TabIndex = 17;
@@ -304,6 +305,7 @@
             // txbEmail
             // 
             this.txbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbEmail.Enabled = false;
             this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbEmail.ForeColor = System.Drawing.SystemColors.Control;
             this.txbEmail.Location = new System.Drawing.Point(60, 196);
@@ -315,6 +317,7 @@
             // txbContato
             // 
             this.txbContato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbContato.Enabled = false;
             this.txbContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbContato.ForeColor = System.Drawing.SystemColors.Control;
             this.txbContato.Location = new System.Drawing.Point(74, 168);
@@ -326,6 +329,7 @@
             // txbCurso
             // 
             this.txbCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbCurso.Enabled = false;
             this.txbCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCurso.ForeColor = System.Drawing.SystemColors.Control;
             this.txbCurso.Location = new System.Drawing.Point(145, 142);
@@ -337,6 +341,7 @@
             // txbCPF
             // 
             this.txbCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbCPF.Enabled = false;
             this.txbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCPF.ForeColor = System.Drawing.SystemColors.Control;
             this.txbCPF.Location = new System.Drawing.Point(163, 77);
@@ -348,6 +353,7 @@
             // txbRA
             // 
             this.txbRA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbRA.Enabled = false;
             this.txbRA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbRA.ForeColor = System.Drawing.SystemColors.Control;
             this.txbRA.Location = new System.Drawing.Point(42, 80);
@@ -359,6 +365,7 @@
             // txbNome
             // 
             this.txbNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbNome.Enabled = false;
             this.txbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNome.ForeColor = System.Drawing.SystemColors.Control;
             this.txbNome.Location = new System.Drawing.Point(62, 49);

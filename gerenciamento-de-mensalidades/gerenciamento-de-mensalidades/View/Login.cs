@@ -1,4 +1,5 @@
 ﻿using gerenciamento_de_mensalidades.View.Aluno;
+using gerenciamento_de_mensalidades.View.Funcionario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,13 @@ namespace gerenciamento_de_mensalidades
         {
             CadastroUsuarioAluno cadUsuarioAluno = new CadastroUsuarioAluno();
             cadUsuarioAluno.Show();
+            this.Visible = false;
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            PaginaInicialFuncionario homePageFuncionario = new PaginaInicialFuncionario();
+            homePageFuncionario.Show();
             this.Visible = false;
         }
     }

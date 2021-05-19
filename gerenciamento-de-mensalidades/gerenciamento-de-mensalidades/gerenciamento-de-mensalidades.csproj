@@ -82,6 +82,30 @@
     <Compile Include="View\Aluno\SolicitacoesAluno.Designer.cs">
       <DependentUpon>SolicitacoesAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Funcionario\ListagemAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionario\ListagemAlunos.Designer.cs">
+      <DependentUpon>ListagemAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Funcionario\PaginaInicialFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionario\PaginaInicialFuncionario.Designer.cs">
+      <DependentUpon>PaginaInicialFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Funcionario\PerfilFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionario\PerfilFuncionario.Designer.cs">
+      <DependentUpon>PerfilFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Funcionario\Solicitacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Funcionario\Solicitacoes.Designer.cs">
+      <DependentUpon>Solicitacoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +131,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Aluno\SolicitacoesAluno.resx">
       <DependentUpon>SolicitacoesAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionario\ListagemAlunos.resx">
+      <DependentUpon>ListagemAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionario\PaginaInicialFuncionario.resx">
+      <DependentUpon>PaginaInicialFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionario\PerfilFuncionario.resx">
+      <DependentUpon>PerfilFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Funcionario\Solicitacoes.resx">
+      <DependentUpon>Solicitacoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -135,7 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\Administrador\" />
-    <Folder Include="View\Funcionario\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
