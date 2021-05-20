@@ -1,6 +1,6 @@
-﻿namespace gerenciamento_de_mensalidades.View.Funcionario
+﻿namespace gerenciamento_de_mensalidades.View.Administrador
 {
-    partial class PaginaInicialFuncionario
+    partial class PaginaInicialAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -32,19 +32,25 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnSolicitacoes = new System.Windows.Forms.Button();
-            this.btnAlunos = new System.Windows.Forms.Button();
-            this.btnMeuPerfil = new System.Windows.Forms.Button();
             this.panelQtdMensalidadesAtrasadas = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSolicitacoes = new System.Windows.Forms.Button();
+            this.btnAlunos = new System.Windows.Forms.Button();
+            this.btnMeuPerfil = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelQtdMensalidadesAtrasadas.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,19 +62,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 60);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(808, 60);
+            this.panel1.TabIndex = 13;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(614, 37);
+            this.label10.Location = new System.Drawing.Point(611, 37);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Funcionário";
+            this.label10.Size = new System.Drawing.Size(83, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Administrador";
             // 
             // label7
             // 
@@ -86,66 +92,21 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(561, 21);
+            this.label6.Location = new System.Drawing.Point(570, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(181, 16);
             this.label6.TabIndex = 3;
             this.label6.Text = "Nome usuário conectado";
-            // 
-            // btnSolicitacoes
-            // 
-            this.btnSolicitacoes.BackColor = System.Drawing.Color.White;
-            this.btnSolicitacoes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSolicitacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSolicitacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnSolicitacoes.Location = new System.Drawing.Point(560, 304);
-            this.btnSolicitacoes.Name = "btnSolicitacoes";
-            this.btnSolicitacoes.Size = new System.Drawing.Size(114, 100);
-            this.btnSolicitacoes.TabIndex = 10;
-            this.btnSolicitacoes.Text = "Solicitações";
-            this.btnSolicitacoes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSolicitacoes.UseVisualStyleBackColor = false;
-            this.btnSolicitacoes.Click += new System.EventHandler(this.btnSolicitacoes_Click);
-            // 
-            // btnAlunos
-            // 
-            this.btnAlunos.BackColor = System.Drawing.Color.White;
-            this.btnAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlunos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnAlunos.Location = new System.Drawing.Point(349, 304);
-            this.btnAlunos.Name = "btnAlunos";
-            this.btnAlunos.Size = new System.Drawing.Size(114, 100);
-            this.btnAlunos.TabIndex = 9;
-            this.btnAlunos.Text = "Alunos";
-            this.btnAlunos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAlunos.UseVisualStyleBackColor = false;
-            this.btnAlunos.Click += new System.EventHandler(this.btnAlunos_Click);
-            // 
-            // btnMeuPerfil
-            // 
-            this.btnMeuPerfil.BackColor = System.Drawing.Color.White;
-            this.btnMeuPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMeuPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMeuPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnMeuPerfil.Location = new System.Drawing.Point(121, 304);
-            this.btnMeuPerfil.Name = "btnMeuPerfil";
-            this.btnMeuPerfil.Size = new System.Drawing.Size(114, 100);
-            this.btnMeuPerfil.TabIndex = 8;
-            this.btnMeuPerfil.Text = "Meu Perfil";
-            this.btnMeuPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMeuPerfil.UseVisualStyleBackColor = false;
-            this.btnMeuPerfil.Click += new System.EventHandler(this.btnMeuPerfil_Click);
             // 
             // panelQtdMensalidadesAtrasadas
             // 
             this.panelQtdMensalidadesAtrasadas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelQtdMensalidadesAtrasadas.Controls.Add(this.label4);
             this.panelQtdMensalidadesAtrasadas.Controls.Add(this.label2);
-            this.panelQtdMensalidadesAtrasadas.Location = new System.Drawing.Point(121, 116);
+            this.panelQtdMensalidadesAtrasadas.Location = new System.Drawing.Point(12, 123);
             this.panelQtdMensalidadesAtrasadas.Name = "panelQtdMensalidadesAtrasadas";
             this.panelQtdMensalidadesAtrasadas.Size = new System.Drawing.Size(252, 128);
-            this.panelQtdMensalidadesAtrasadas.TabIndex = 11;
+            this.panelQtdMensalidadesAtrasadas.TabIndex = 17;
             // 
             // label4
             // 
@@ -169,15 +130,60 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "0";
             // 
+            // btnSolicitacoes
+            // 
+            this.btnSolicitacoes.BackColor = System.Drawing.Color.White;
+            this.btnSolicitacoes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSolicitacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnSolicitacoes.Location = new System.Drawing.Point(444, 311);
+            this.btnSolicitacoes.Name = "btnSolicitacoes";
+            this.btnSolicitacoes.Size = new System.Drawing.Size(114, 100);
+            this.btnSolicitacoes.TabIndex = 16;
+            this.btnSolicitacoes.Text = "Solicitações";
+            this.btnSolicitacoes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSolicitacoes.UseVisualStyleBackColor = false;
+            this.btnSolicitacoes.Click += new System.EventHandler(this.btnSolicitacoes_Click);
+            // 
+            // btnAlunos
+            // 
+            this.btnAlunos.BackColor = System.Drawing.Color.White;
+            this.btnAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlunos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnAlunos.Location = new System.Drawing.Point(256, 311);
+            this.btnAlunos.Name = "btnAlunos";
+            this.btnAlunos.Size = new System.Drawing.Size(114, 100);
+            this.btnAlunos.TabIndex = 15;
+            this.btnAlunos.Text = "Alunos";
+            this.btnAlunos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAlunos.UseVisualStyleBackColor = false;
+            this.btnAlunos.Click += new System.EventHandler(this.btnAlunos_Click);
+            // 
+            // btnMeuPerfil
+            // 
+            this.btnMeuPerfil.BackColor = System.Drawing.Color.White;
+            this.btnMeuPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMeuPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMeuPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnMeuPerfil.Location = new System.Drawing.Point(71, 311);
+            this.btnMeuPerfil.Name = "btnMeuPerfil";
+            this.btnMeuPerfil.Size = new System.Drawing.Size(114, 100);
+            this.btnMeuPerfil.TabIndex = 14;
+            this.btnMeuPerfil.Text = "Meu Perfil";
+            this.btnMeuPerfil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMeuPerfil.UseVisualStyleBackColor = false;
+            this.btnMeuPerfil.Click += new System.EventHandler(this.btnMeuPerfil_Click);
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(422, 116);
+            this.panel2.Location = new System.Drawing.Point(279, 123);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(252, 128);
-            this.panel2.TabIndex = 12;
+            this.panel2.TabIndex = 18;
             // 
             // label1
             // 
@@ -201,40 +207,103 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "0";
             // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Location = new System.Drawing.Point(549, 123);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(251, 128);
+            this.panel3.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(44, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(167, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Divida total dos alunos";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(726, 77);
+            this.label8.Location = new System.Drawing.Point(56, 16);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 16);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Sair";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.label8.Size = new System.Drawing.Size(88, 39);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "0,00";
             // 
-            // PaginaInicialFuncionario
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(3, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 39);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "R$";
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.White;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnUsuarios.Location = new System.Drawing.Point(623, 311);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(114, 100);
+            this.btnUsuarios.TabIndex = 20;
+            this.btnUsuarios.Text = "Usuários";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.Control;
+            this.label11.Location = new System.Drawing.Point(741, 83);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 16);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Sair";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // PaginaInicialAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(808, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btnUsuarios);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelQtdMensalidadesAtrasadas);
             this.Controls.Add(this.btnSolicitacoes);
             this.Controls.Add(this.btnAlunos);
             this.Controls.Add(this.btnMeuPerfil);
-            this.Controls.Add(this.panel1);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Name = "PaginaInicialFuncionario";
-            this.Text = "PaginaInicialFuncionario";
+            this.Controls.Add(this.panel2);
+            this.Name = "PaginaInicialAdmin";
+            this.Text = "PaginaInicialAdmin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelQtdMensalidadesAtrasadas.ResumeLayout(false);
             this.panelQtdMensalidadesAtrasadas.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,16 +314,21 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnSolicitacoes;
-        private System.Windows.Forms.Button btnAlunos;
-        private System.Windows.Forms.Button btnMeuPerfil;
         private System.Windows.Forms.Panel panelQtdMensalidadesAtrasadas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSolicitacoes;
+        private System.Windows.Forms.Button btnAlunos;
+        private System.Windows.Forms.Button btnMeuPerfil;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

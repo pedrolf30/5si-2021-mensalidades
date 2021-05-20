@@ -1,6 +1,8 @@
-﻿using System;
+﻿using gerenciamento_de_mensalidades.View.Administrador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -19,30 +21,39 @@ namespace gerenciamento_de_mensalidades.View.Funcionario
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            lblNome.Visible = true;
-            txbNome.Visible = true;
-            lblContato.Visible = true;
-            txbContato.Visible = true;
-            lblRA.Visible = true;
-            txbRA.Visible = true;
-            lblCPF.Visible = true;
-            txbCPF.Visible = true;
-            lblEmail.Visible = true;
-            txbEmail.Visible = true;
-            lblCurso.Visible = true;
-            txbCurso.Visible = true;
-            lblNascimento.Visible = true;
-            txbNascimento.Visible = true;
+            panelDados.Visible = true;
 
-            qtdValorTotalDividas.Visible = true;
-            panelQtdMensalidadesAtrasadas.Visible = true;
+            if (ConfigurationManager.AppSettings["user"] == "Admin")
+            {
+                btnDesativar.Visible = true;
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            PaginaInicialFuncionario paginaInicialFuncionario = new PaginaInicialFuncionario();
-            paginaInicialFuncionario.Show();
-            this.Visible = false;
+            if (ConfigurationManager.AppSettings["user"] == "Func")
+            {
+                PaginaInicialFuncionario paginaInicialFuncionario = new PaginaInicialFuncionario();
+                paginaInicialFuncionario.Show();
+                this.Visible = false;
+            }
+            else if(ConfigurationManager.AppSettings["user"] == "Admin")
+            {
+                PaginaInicialAdmin homePageAdmin = new PaginaInicialAdmin();
+                homePageAdmin.Show();
+                this.Visible = false;
+            }
+            
+        }
+
+        private void btnDesativar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Aluno desativado com sucesso!");
+        }
+
+        private void btnBolsista_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("O Aluno X agora é um bolsista");
         }
     }
 }

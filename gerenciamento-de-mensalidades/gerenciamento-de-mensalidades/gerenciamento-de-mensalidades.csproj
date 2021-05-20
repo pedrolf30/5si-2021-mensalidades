@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\Administrador\CadastroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Administrador\CadastroUsuarios.Designer.cs">
+      <DependentUpon>CadastroUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Administrador\PaginaInicialAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Administrador\PaginaInicialAdmin.Designer.cs">
+      <DependentUpon>PaginaInicialAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Aluno\CadastroAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +127,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\Administrador\CadastroUsuarios.resx">
+      <DependentUpon>CadastroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Administrador\PaginaInicialAdmin.resx">
+      <DependentUpon>PaginaInicialAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Aluno\CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,8 +188,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\Administrador\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

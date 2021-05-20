@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panelQtdMensalidadesAtrasadas = new System.Windows.Forms.Panel();
@@ -41,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelQtdMensalidadesAtrasadas.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -49,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -56,6 +59,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 60);
             this.panel1.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Control;
+            this.label10.Location = new System.Drawing.Point(629, 37);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Aluno";
             // 
             // label7
             // 
@@ -84,7 +98,7 @@
             this.panelQtdMensalidadesAtrasadas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelQtdMensalidadesAtrasadas.Controls.Add(this.label4);
             this.panelQtdMensalidadesAtrasadas.Controls.Add(this.label2);
-            this.panelQtdMensalidadesAtrasadas.Location = new System.Drawing.Point(125, 78);
+            this.panelQtdMensalidadesAtrasadas.Location = new System.Drawing.Point(123, 105);
             this.panelQtdMensalidadesAtrasadas.Name = "panelQtdMensalidadesAtrasadas";
             this.panelQtdMensalidadesAtrasadas.Size = new System.Drawing.Size(252, 128);
             this.panelQtdMensalidadesAtrasadas.TabIndex = 1;
@@ -117,7 +131,7 @@
             this.btnMeuPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMeuPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMeuPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnMeuPerfil.Location = new System.Drawing.Point(125, 270);
+            this.btnMeuPerfil.Location = new System.Drawing.Point(123, 297);
             this.btnMeuPerfil.Name = "btnMeuPerfil";
             this.btnMeuPerfil.Size = new System.Drawing.Size(114, 100);
             this.btnMeuPerfil.TabIndex = 3;
@@ -132,7 +146,7 @@
             this.btnMinhasMensalidades.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMinhasMensalidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinhasMensalidades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnMinhasMensalidades.Location = new System.Drawing.Point(353, 270);
+            this.btnMinhasMensalidades.Location = new System.Drawing.Point(351, 297);
             this.btnMinhasMensalidades.Name = "btnMinhasMensalidades";
             this.btnMinhasMensalidades.Size = new System.Drawing.Size(114, 100);
             this.btnMinhasMensalidades.TabIndex = 4;
@@ -147,7 +161,7 @@
             this.btnSolicitacoes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSolicitacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.btnSolicitacoes.Location = new System.Drawing.Point(564, 270);
+            this.btnSolicitacoes.Location = new System.Drawing.Point(562, 297);
             this.btnSolicitacoes.Name = "btnSolicitacoes";
             this.btnSolicitacoes.Size = new System.Drawing.Size(114, 100);
             this.btnSolicitacoes.TabIndex = 5;
@@ -162,7 +176,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(427, 78);
+            this.panel2.Location = new System.Drawing.Point(425, 105);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(251, 128);
             this.panel2.TabIndex = 6;
@@ -200,12 +214,26 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "R$";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(723, 75);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(36, 16);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Sair";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // PaginaInicialAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnSolicitacoes);
             this.Controls.Add(this.btnMinhasMensalidades);
@@ -221,6 +249,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -239,5 +268,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
     }
 }

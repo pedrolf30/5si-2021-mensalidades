@@ -37,5 +37,12 @@ namespace gerenciamento_de_mensalidades.View.Aluno
             solicitacoesAluno.Show();
             this.Visible = false;
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Login sairParaLogin = new Login();
+            sairParaLogin.Show();
+            this.Visible = false;
+        }
     }
 }
