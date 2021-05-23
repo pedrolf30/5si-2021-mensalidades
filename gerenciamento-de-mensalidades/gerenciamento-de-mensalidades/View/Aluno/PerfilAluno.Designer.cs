@@ -53,7 +53,6 @@
             this.txbNome = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnTrocaSenha = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.txbSenha2 = new System.Windows.Forms.TextBox();
             this.txbSenha1 = new System.Windows.Forms.TextBox();
             this.lblSenha2 = new System.Windows.Forms.Label();
@@ -86,6 +85,7 @@
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Complemento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -377,8 +377,8 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.btnTrocaSenha);
             this.panel3.Controls.Add(this.btnSalvar);
+            this.panel3.Controls.Add(this.btnTrocaSenha);
             this.panel3.Controls.Add(this.txbSenha2);
             this.panel3.Controls.Add(this.txbSenha1);
             this.panel3.Controls.Add(this.lblSenha2);
@@ -394,28 +394,13 @@
             this.btnTrocaSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrocaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrocaSenha.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnTrocaSenha.Location = new System.Drawing.Point(157, 46);
+            this.btnTrocaSenha.Location = new System.Drawing.Point(159, 41);
             this.btnTrocaSenha.Name = "btnTrocaSenha";
             this.btnTrocaSenha.Size = new System.Drawing.Size(140, 37);
             this.btnTrocaSenha.TabIndex = 16;
             this.btnTrocaSenha.Text = "Alterar a senha";
             this.btnTrocaSenha.UseVisualStyleBackColor = true;
             this.btnTrocaSenha.Click += new System.EventHandler(this.btnTrocaSenha_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSalvar.Location = new System.Drawing.Point(181, 92);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(93, 26);
-            this.btnSalvar.TabIndex = 15;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Visible = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txbSenha2
             // 
@@ -509,7 +494,7 @@
             this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAdicionar.Location = new System.Drawing.Point(197, 267);
+            this.btnAdicionar.Location = new System.Drawing.Point(230, 267);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(93, 26);
             this.btnAdicionar.TabIndex = 27;
@@ -523,7 +508,7 @@
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDeletar.Location = new System.Drawing.Point(143, 267);
+            this.btnDeletar.Location = new System.Drawing.Point(118, 267);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(93, 26);
             this.btnDeletar.TabIndex = 26;
@@ -771,6 +756,20 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSalvar.Location = new System.Drawing.Point(191, 95);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(93, 26);
+            this.btnSalvar.TabIndex = 36;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Visible = false;
+            // 
             // PerfilAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -817,7 +816,6 @@
         private System.Windows.Forms.TextBox txbSenha2;
         private System.Windows.Forms.TextBox txbSenha1;
         private System.Windows.Forms.Button btnTrocaSenha;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
@@ -857,5 +855,6 @@
         private System.Windows.Forms.ComboBox cbCurso;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

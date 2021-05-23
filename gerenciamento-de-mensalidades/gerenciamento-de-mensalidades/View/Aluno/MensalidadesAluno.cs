@@ -7,21 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using gerenciamento_de_mensalidades.Controller;
+using gerenciamento_de_mensalidades.Model;
 
 namespace gerenciamento_de_mensalidades.View.Aluno
 {
     public partial class MensalidadesAluno : Form
     {
-        public MensalidadesAluno()
+        UsuarioModel currentUser;
+        public MensalidadesAluno(UsuarioModel usuario)
         {
             InitializeComponent();
+            currentUser = usuario;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            PaginaInicialAluno paginaInicialAluno = new PaginaInicialAluno();
-            paginaInicialAluno.Show();
-            this.Visible = false;
+            UsuarioController usuarioController = new UsuarioController();
+            usuarioController.VoltarParaPaginaInicial(currentUser, this);
         }
     }
 }

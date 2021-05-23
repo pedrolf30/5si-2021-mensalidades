@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Maio-2021 às 04:47
--- Versão do servidor: 10.4.14-MariaDB
--- versão do PHP: 7.4.11
+-- Tempo de geração: 24-Maio-2021 às 00:08
+-- Versão do servidor: 10.4.11-MariaDB
+-- versão do PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,21 +33,19 @@ CREATE TABLE `tb_alunos` (
   `nome_completo` varchar(100) NOT NULL,
   `RA` int(11) NOT NULL,
   `data_nascimento` date NOT NULL,
-  `cpf` varchar(15) NOT NULL,
-  `curso_matriculado` varchar(20) NOT NULL,
-  `contato` varchar(15) NOT NULL,
-  `email` varchar(64) NOT NULL,
-  `ativo` tinyint(1) NOT NULL,
-  `id_usuario` int(11) NOT NULL
+  `CPF` varchar(14) NOT NULL,
+  `curso_matriculado` varchar(30) NOT NULL,
+  `contato` varchar(30) NOT NULL,
+  `id_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `tb_alunos`
 --
 
-INSERT INTO `tb_alunos` (`id_aluno`, `nome_completo`, `RA`, `data_nascimento`, `cpf`, `curso_matriculado`, `contato`, `email`, `ativo`, `id_usuario`) VALUES
-(2, 'Pedro L. Ferrareso', 9942, '2001-02-19', '50248905822', 'Sistemas de Informaç', '19996958005', 'pedro.ferrareso@email.com', 1, 1),
-(3, 'Aluno Teste', 31451, '1996-04-26', '13564378905', 'Direto', '21887456876', 'aluno.exemplo@email.com', 1, 4);
+INSERT INTO `tb_alunos` (`id_aluno`, `nome_completo`, `RA`, `data_nascimento`, `CPF`, `curso_matriculado`, `contato`, `id_usuario`) VALUES
+(1, 'Pedro L. Ferrareso', 9942, '2001-02-19', '502.489.058-22', 'Sistemas de Informação', '(19) 9 9695-8005', 1),
+(2, 'Aluno Teste', 31451, '1996-04-12', '135.643.789-05', 'Direito', '(21) 8 8745-6876', 4);
 
 -- --------------------------------------------------------
 
@@ -65,7 +64,7 @@ CREATE TABLE `tb_bolsistas` (
 --
 
 INSERT INTO `tb_bolsistas` (`id_bolsista`, `id_aluno`, `desconto`) VALUES
-(2, 3, '35%');
+(1, 2, '35%');
 
 -- --------------------------------------------------------
 
@@ -81,7 +80,7 @@ CREATE TABLE `tb_enderecos` (
   `cep` varchar(9) NOT NULL,
   `bairro` varchar(50) NOT NULL,
   `cidade` varchar(50) NOT NULL,
-  `estado` varchar(2) NOT NULL,
+  `estado` char(2) NOT NULL,
   `complemento` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -90,7 +89,7 @@ CREATE TABLE `tb_enderecos` (
 --
 
 INSERT INTO `tb_enderecos` (`id_endereco`, `id_aluno`, `rua`, `numero`, `cep`, `bairro`, `cidade`, `estado`, `complemento`) VALUES
-(1, 2, 'Rua Endereço do Pedro', 777, '13171635', 'Bairro do Pedro', 'Sumaré', 'SP', '');
+(1, 1, 'Rua Endereço do Pedro', 777, '13171-635', 'Bairro do Pedro', 'Sumaré', 'SP', '');
 
 -- --------------------------------------------------------
 
@@ -102,10 +101,8 @@ CREATE TABLE `tb_funcionarios` (
   `id_funcionario` int(11) NOT NULL,
   `nome_completo` varchar(100) NOT NULL,
   `data_nascimento` date NOT NULL,
-  `cpf` varchar(15) NOT NULL,
-  `contato` varchar(15) NOT NULL,
-  `email` varchar(64) NOT NULL,
-  `ativo` tinyint(1) NOT NULL,
+  `CPF` varchar(14) NOT NULL,
+  `contato` varchar(30) NOT NULL,
   `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -113,9 +110,9 @@ CREATE TABLE `tb_funcionarios` (
 -- Extraindo dados da tabela `tb_funcionarios`
 --
 
-INSERT INTO `tb_funcionarios` (`id_funcionario`, `nome_completo`, `data_nascimento`, `cpf`, `contato`, `email`, `ativo`, `id_usuario`) VALUES
-(1, 'Administrador', '2021-05-16', '0000000000', '0000000000', 'admin@admin.com', 1, 2),
-(2, 'Samuel P. A. Cezar', '2001-01-01', '30245217421', '19348965331', 'samuel.cezar@email.com', 1, 3);
+INSERT INTO `tb_funcionarios` (`id_funcionario`, `nome_completo`, `data_nascimento`, `CPF`, `contato`, `id_usuario`) VALUES
+(1, 'Samuel P. A. Cezar', '2001-07-18', '302.452.174-21', '(19) 3896-5331', 3),
+(2, 'João da Silva', '2005-05-20', '398.902.819-02', '(19) 9 9748-9182', 5);
 
 -- --------------------------------------------------------
 
@@ -163,7 +160,27 @@ CREATE TABLE `tb_solicitacoes` (
 --
 
 INSERT INTO `tb_solicitacoes` (`id_solicitacao`, `id_aluno`, `id_funcionario`, `categoria`, `descricao`, `data_solicitacao`, `status`, `resposta`) VALUES
-(1, 3, 2, 'Solicitação de Bolsa', 'Bom dia, estou abrindo essa solicitação para pedir uma bolsa para o curso de direito', '2021-05-16', 'Pendente', NULL);
+(1, 2, 1, 'Solicitação de Bolsa', 'Bom dia, estou abrindo essa solicitação para pedir uma bolsa para o curso de direito', '2021-05-16', 'Pendente', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_tipos_usuario`
+--
+
+CREATE TABLE `tb_tipos_usuario` (
+  `id_tipo_usuario` int(11) NOT NULL,
+  `descricao` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tb_tipos_usuario`
+--
+
+INSERT INTO `tb_tipos_usuario` (`id_tipo_usuario`, `descricao`) VALUES
+(1, 'Administrador'),
+(2, 'Funcionario'),
+(3, 'Aluno');
 
 -- --------------------------------------------------------
 
@@ -175,7 +192,7 @@ CREATE TABLE `tb_usuarios` (
   `id_usuario` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(50) NOT NULL,
-  `admin` tinyint(1) NOT NULL,
+  `id_tipo_usuario` int(11) NOT NULL,
   `ativo` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -183,11 +200,12 @@ CREATE TABLE `tb_usuarios` (
 -- Extraindo dados da tabela `tb_usuarios`
 --
 
-INSERT INTO `tb_usuarios` (`id_usuario`, `email`, `senha`, `admin`, `ativo`) VALUES
-(1, 'pedro.ferrareso', 'pedro123', 0, 1),
+INSERT INTO `tb_usuarios` (`id_usuario`, `email`, `senha`, `id_tipo_usuario`, `ativo`) VALUES
+(1, 'pedrolf30@gmail.com', 'pedro123', 3, 1),
 (2, 'admin@admin.com', 'admin123', 1, 1),
-(3, 'samuel.cezar@email.com', 'samuel123', 0, 1),
-(4, 'aluno.exemplo@email.com', 'aluno123', 0, 1);
+(3, 'samuel.cezar@email.com', 'samuel123', 2, 1),
+(4, 'aluno.exemplo@email.com', 'aluno123', 3, 1),
+(5, 'joao.silva@gmail.com', '1234', 2, 1);
 
 --
 -- Índices para tabelas despejadas
@@ -198,7 +216,9 @@ INSERT INTO `tb_usuarios` (`id_usuario`, `email`, `senha`, `admin`, `ativo`) VAL
 --
 ALTER TABLE `tb_alunos`
   ADD PRIMARY KEY (`id_aluno`),
-  ADD KEY `id_usuario` (`id_usuario`);
+  ADD UNIQUE KEY `RA` (`RA`),
+  ADD UNIQUE KEY `CPF` (`CPF`),
+  ADD UNIQUE KEY `id_usuario` (`id_usuario`);
 
 --
 -- Índices para tabela `tb_bolsistas`
@@ -219,7 +239,8 @@ ALTER TABLE `tb_enderecos`
 --
 ALTER TABLE `tb_funcionarios`
   ADD PRIMARY KEY (`id_funcionario`),
-  ADD KEY `id_usuario` (`id_usuario`);
+  ADD UNIQUE KEY `CPF` (`CPF`),
+  ADD UNIQUE KEY `id_usuario` (`id_usuario`);
 
 --
 -- Índices para tabela `tb_mensalidades`
@@ -237,10 +258,18 @@ ALTER TABLE `tb_solicitacoes`
   ADD KEY `id_funcionario` (`id_funcionario`);
 
 --
+-- Índices para tabela `tb_tipos_usuario`
+--
+ALTER TABLE `tb_tipos_usuario`
+  ADD PRIMARY KEY (`id_tipo_usuario`);
+
+--
 -- Índices para tabela `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  ADD PRIMARY KEY (`id_usuario`);
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD KEY `id_tipo_usuario` (`id_tipo_usuario`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -268,7 +297,7 @@ ALTER TABLE `tb_enderecos`
 -- AUTO_INCREMENT de tabela `tb_funcionarios`
 --
 ALTER TABLE `tb_funcionarios`
-  MODIFY `id_funcionario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_funcionario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `tb_mensalidades`
@@ -283,10 +312,16 @@ ALTER TABLE `tb_solicitacoes`
   MODIFY `id_solicitacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de tabela `tb_tipos_usuario`
+--
+ALTER TABLE `tb_tipos_usuario`
+  MODIFY `id_tipo_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de tabela `tb_usuarios`
 --
 ALTER TABLE `tb_usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restrições para despejos de tabelas
@@ -296,38 +331,44 @@ ALTER TABLE `tb_usuarios`
 -- Limitadores para a tabela `tb_alunos`
 --
 ALTER TABLE `tb_alunos`
-  ADD CONSTRAINT `tb_alunos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuarios` (`id_usuario`);
+  ADD CONSTRAINT `tb_alunos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuarios` (`id_usuario`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `tb_bolsistas`
 --
 ALTER TABLE `tb_bolsistas`
-  ADD CONSTRAINT `tb_bolsistas_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id_aluno`);
+  ADD CONSTRAINT `tb_bolsistas_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id_aluno`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `tb_enderecos`
 --
 ALTER TABLE `tb_enderecos`
-  ADD CONSTRAINT `tb_enderecos_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id_aluno`);
+  ADD CONSTRAINT `tb_enderecos_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id_aluno`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `tb_funcionarios`
 --
 ALTER TABLE `tb_funcionarios`
-  ADD CONSTRAINT `tb_funcionarios_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuarios` (`id_usuario`);
+  ADD CONSTRAINT `tb_funcionarios_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `tb_mensalidades`
 --
 ALTER TABLE `tb_mensalidades`
-  ADD CONSTRAINT `tb_mensalidades_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id_aluno`);
+  ADD CONSTRAINT `tb_mensalidades_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id_aluno`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `tb_solicitacoes`
 --
 ALTER TABLE `tb_solicitacoes`
-  ADD CONSTRAINT `tb_solicitacoes_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id_aluno`),
-  ADD CONSTRAINT `tb_solicitacoes_ibfk_2` FOREIGN KEY (`id_funcionario`) REFERENCES `tb_funcionarios` (`id_funcionario`);
+  ADD CONSTRAINT `tb_solicitacoes_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id_aluno`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tb_solicitacoes_ibfk_2` FOREIGN KEY (`id_funcionario`) REFERENCES `tb_funcionarios` (`id_funcionario`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Limitadores para a tabela `tb_usuarios`
+--
+ALTER TABLE `tb_usuarios`
+  ADD CONSTRAINT `tb_usuarios_ibfk_1` FOREIGN KEY (`id_tipo_usuario`) REFERENCES `tb_tipos_usuario` (`id_tipo_usuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

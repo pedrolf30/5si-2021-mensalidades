@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblEmailCurrentUser = new System.Windows.Forms.Label();
             this.panelQtdMensalidadesAtrasadas = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblEmailCurrentUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -87,16 +87,16 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Página inicial";
             // 
-            // label6
+            // lblEmailCurrentUser
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(570, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 16);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Nome usuário conectado";
+            this.lblEmailCurrentUser.AutoSize = true;
+            this.lblEmailCurrentUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailCurrentUser.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblEmailCurrentUser.Location = new System.Drawing.Point(570, 21);
+            this.lblEmailCurrentUser.Name = "lblEmailCurrentUser";
+            this.lblEmailCurrentUser.Size = new System.Drawing.Size(201, 16);
+            this.lblEmailCurrentUser.TabIndex = 3;
+            this.lblEmailCurrentUser.Text = "Email do usuário conectado";
             // 
             // panelQtdMensalidadesAtrasadas
             // 
@@ -295,7 +295,9 @@
             this.Controls.Add(this.btnMeuPerfil);
             this.Controls.Add(this.panel2);
             this.Name = "PaginaInicialAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaginaInicialAdmin";
+            this.Load += new System.EventHandler(this.PaginaInicialAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelQtdMensalidadesAtrasadas.ResumeLayout(false);
@@ -313,7 +315,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblEmailCurrentUser;
         private System.Windows.Forms.Panel panelQtdMensalidadesAtrasadas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;

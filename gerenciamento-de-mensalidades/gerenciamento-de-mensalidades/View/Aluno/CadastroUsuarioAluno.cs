@@ -19,9 +19,7 @@ namespace gerenciamento_de_mensalidades.View.Aluno
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            CadastroAluno cadAluno = new CadastroAluno();
-            cadAluno.Show();
-            this.Visible = false;
+
         }
     }
 }

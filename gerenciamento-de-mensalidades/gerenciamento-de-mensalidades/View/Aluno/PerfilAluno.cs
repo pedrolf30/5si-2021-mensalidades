@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using gerenciamento_de_mensalidades.Controller;
+using gerenciamento_de_mensalidades.Model;
 
 namespace gerenciamento_de_mensalidades.View.Aluno
 {
     public partial class PerfilAluno : Form
     {
-        public PerfilAluno()
+        UsuarioModel currentUser;
+        public PerfilAluno(UsuarioModel usuario)
         {
             InitializeComponent();
+            currentUser = usuario;
         }
 
         private void btnTrocaSenha_Click(object sender, EventArgs e)
@@ -26,7 +30,7 @@ namespace gerenciamento_de_mensalidades.View.Aluno
             btnSalvar.Visible = true;
             btnTrocaSenha.Visible = false;
         }
-
+        
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             lblSenha1.Visible = false;
@@ -37,7 +41,7 @@ namespace gerenciamento_de_mensalidades.View.Aluno
             btnTrocaSenha.Visible = true;
             MessageBox.Show("Senha alterada com sucesso!");
         }
-
+        
         private void btnEditarPessoa_Click(object sender, EventArgs e)
         {
             txbNome.ReadOnly = false;
@@ -107,9 +111,8 @@ namespace gerenciamento_de_mensalidades.View.Aluno
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            PaginaInicialAluno paginaInicialAluno = new PaginaInicialAluno();
-            paginaInicialAluno.Show();
-            this.Visible = false;
+            UsuarioController usuarioController = new UsuarioController();
+            usuarioController.VoltarParaPaginaInicial(currentUser, this);
         }
     }
 }

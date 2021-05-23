@@ -8,42 +8,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using gerenciamento_de_mensalidades.Model;
 
 namespace gerenciamento_de_mensalidades.View.Administrador
 {
     public partial class PaginaInicialAdmin : Form
     {
-        public PaginaInicialAdmin()
+        UsuarioModel currentUser;
+        public PaginaInicialAdmin(UsuarioModel usuario)
         {
             InitializeComponent();
+            currentUser = usuario;
+        }
+
+        private void PaginaInicialAdmin_Load(object sender, EventArgs e)
+        {
+            lblEmailCurrentUser.Text = currentUser.Email;
         }
 
         private void btnMeuPerfil_Click(object sender, EventArgs e)
         {
-            PerfilFuncionario perfilFuncionario = new PerfilFuncionario();
-            perfilFuncionario.Show();
-            this.Visible = false;
+
         }
 
         private void btnAlunos_Click(object sender, EventArgs e)
         {
-            ListagemAlunos listagemAlunos = new ListagemAlunos();
-            listagemAlunos.Show();
-            this.Visible = false;
+
         }
 
         private void btnSolicitacoes_Click(object sender, EventArgs e)
         {
-            Solicitacoes solicitacoes = new Solicitacoes();
-            solicitacoes.Show();
-            this.Visible = false;
+
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            CadastroUsuarios solicitacoes = new CadastroUsuarios();
-            solicitacoes.Show();
-            this.Visible = false;
+            CadastroUsuarios usuarios = new CadastroUsuarios(currentUser);
+            this.Hide();
+            usuarios.Show();
         }
 
         private void label11_Click(object sender, EventArgs e)

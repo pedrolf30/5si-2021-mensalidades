@@ -9,14 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using gerenciamento_de_mensalidades.Model;
 
 namespace gerenciamento_de_mensalidades.View.Funcionario
 {
     public partial class ListagemAlunos : Form
     {
-        public ListagemAlunos()
+        UsuarioModel currentUser;
+        public ListagemAlunos(UsuarioModel usuario)
         {
             InitializeComponent();
+            currentUser = usuario;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -31,18 +34,6 @@ namespace gerenciamento_de_mensalidades.View.Funcionario
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            if (ConfigurationManager.AppSettings["user"] == "Func")
-            {
-                PaginaInicialFuncionario paginaInicialFuncionario = new PaginaInicialFuncionario();
-                paginaInicialFuncionario.Show();
-                this.Visible = false;
-            }
-            else if(ConfigurationManager.AppSettings["user"] == "Admin")
-            {
-                PaginaInicialAdmin homePageAdmin = new PaginaInicialAdmin();
-                homePageAdmin.Show();
-                this.Visible = false;
-            }
             
         }
 
