@@ -16,9 +16,7 @@ namespace gerenciamento_de_mensalidades.Controller
     {
         public void FazerLogin(TextBox email, TextBox senha, Form loginView)
         {
-            UsuarioModel usuario = new UsuarioModel();
-            usuario.Email = email.Text;
-            usuario.Senha = senha.Text;
+            UsuarioModel usuario = new UsuarioModel(email: email.Text, senha: senha.Text);
             usuario = usuario.FazerLogin();
 
             if (usuario.TipoUsuario == TipoUsuario.Administrador)

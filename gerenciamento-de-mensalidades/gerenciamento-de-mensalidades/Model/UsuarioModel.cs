@@ -25,6 +25,12 @@ namespace gerenciamento_de_mensalidades.Model
             this.idUsuario = idUsuario;
         }
 
+        public UsuarioModel(string email, string senha)
+        {
+            this.email = email;
+            this.senha = senha;
+        }
+
         public UsuarioModel(int idUsuario, string email, bool ativo)
         {
             this.idUsuario = idUsuario;

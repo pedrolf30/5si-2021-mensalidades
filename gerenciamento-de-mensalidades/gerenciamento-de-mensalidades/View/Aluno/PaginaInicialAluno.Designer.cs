@@ -241,6 +241,7 @@
             this.Controls.Add(this.panelQtdMensalidadesAtrasadas);
             this.Controls.Add(this.panel1);
             this.Name = "PaginaInicialAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Página inicial";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

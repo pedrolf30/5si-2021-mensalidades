@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
-            this.lblNascimento = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.txbNome = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.lblCurso = new System.Windows.Forms.Label();
-            this.cbCurso = new System.Windows.Forms.ComboBox();
-            this.lblCPF = new System.Windows.Forms.Label();
-            this.txbCPF = new System.Windows.Forms.TextBox();
-            this.txbRA = new System.Windows.Forms.TextBox();
-            this.lblRA = new System.Windows.Forms.Label();
             this.lblContato = new System.Windows.Forms.Label();
             this.txbContato = new System.Windows.Forms.TextBox();
+            this.cbCurso = new System.Windows.Forms.ComboBox();
+            this.lblCurso = new System.Windows.Forms.Label();
+            this.lblRA = new System.Windows.Forms.Label();
+            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
+            this.txbRA = new System.Windows.Forms.TextBox();
+            this.lblNascimento = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txbCPF = new System.Windows.Forms.TextBox();
+            this.txbNome = new System.Windows.Forms.TextBox();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +68,66 @@
             this.panel1.Size = new System.Drawing.Size(518, 354);
             this.panel1.TabIndex = 2;
             // 
+            // lblContato
+            // 
+            this.lblContato.AutoSize = true;
+            this.lblContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContato.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblContato.Location = new System.Drawing.Point(329, 170);
+            this.lblContato.Name = "lblContato";
+            this.lblContato.Size = new System.Drawing.Size(140, 20);
+            this.lblContato.TabIndex = 14;
+            this.lblContato.Text = "Telefone/Celular";
+            // 
+            // txbContato
+            // 
+            this.txbContato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbContato.ForeColor = System.Drawing.SystemColors.Control;
+            this.txbContato.Location = new System.Drawing.Point(333, 193);
+            this.txbContato.Name = "txbContato";
+            this.txbContato.Size = new System.Drawing.Size(153, 21);
+            this.txbContato.TabIndex = 5;
+            // 
+            // cbCurso
+            // 
+            this.cbCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCurso.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbCurso.FormattingEnabled = true;
+            this.cbCurso.Items.AddRange(new object[] {
+            "Sistemas de Informação",
+            "Direito",
+            "Pedagogia",
+            "Psicologia"});
+            this.cbCurso.Location = new System.Drawing.Point(28, 194);
+            this.cbCurso.Name = "cbCurso";
+            this.cbCurso.Size = new System.Drawing.Size(249, 21);
+            this.cbCurso.TabIndex = 4;
+            // 
+            // lblCurso
+            // 
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCurso.Location = new System.Drawing.Point(24, 170);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(154, 20);
+            this.lblCurso.TabIndex = 9;
+            this.lblCurso.Text = "Curso matriculado";
+            // 
+            // lblRA
+            // 
+            this.lblRA.AutoSize = true;
+            this.lblRA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRA.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRA.Location = new System.Drawing.Point(329, 44);
+            this.lblRA.Name = "lblRA";
+            this.lblRA.Size = new System.Drawing.Size(34, 20);
+            this.lblRA.TabIndex = 8;
+            this.lblRA.Text = "RA";
+            // 
             // dtpNascimento
             // 
             this.dtpNascimento.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
@@ -75,7 +135,17 @@
             this.dtpNascimento.Location = new System.Drawing.Point(28, 131);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(249, 20);
-            this.dtpNascimento.TabIndex = 7;
+            this.dtpNascimento.TabIndex = 2;
+            // 
+            // txbRA
+            // 
+            this.txbRA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbRA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbRA.ForeColor = System.Drawing.SystemColors.Control;
+            this.txbRA.Location = new System.Drawing.Point(333, 67);
+            this.txbRA.Name = "txbRA";
+            this.txbRA.Size = new System.Drawing.Size(153, 21);
+            this.txbRA.TabIndex = 1;
             // 
             // lblNascimento
             // 
@@ -102,6 +172,16 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // txbCPF
+            // 
+            this.txbCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCPF.ForeColor = System.Drawing.SystemColors.Control;
+            this.txbCPF.Location = new System.Drawing.Point(333, 131);
+            this.txbCPF.Name = "txbCPF";
+            this.txbCPF.Size = new System.Drawing.Size(153, 21);
+            this.txbCPF.TabIndex = 3;
+            // 
             // txbNome
             // 
             this.txbNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
@@ -110,40 +190,7 @@
             this.txbNome.Location = new System.Drawing.Point(28, 67);
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(249, 21);
-            this.txbNome.TabIndex = 2;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNome.Location = new System.Drawing.Point(24, 44);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(133, 20);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome completo";
-            // 
-            // lblCurso
-            // 
-            this.lblCurso.AutoSize = true;
-            this.lblCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCurso.Location = new System.Drawing.Point(24, 170);
-            this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(154, 20);
-            this.lblCurso.TabIndex = 9;
-            this.lblCurso.Text = "Curso matriculado";
-            // 
-            // cbCurso
-            // 
-            this.cbCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.cbCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCurso.ForeColor = System.Drawing.SystemColors.Control;
-            this.cbCurso.FormattingEnabled = true;
-            this.cbCurso.Location = new System.Drawing.Point(28, 194);
-            this.cbCurso.Name = "cbCurso";
-            this.cbCurso.Size = new System.Drawing.Size(249, 21);
-            this.cbCurso.TabIndex = 10;
+            this.txbNome.TabIndex = 0;
             // 
             // lblCPF
             // 
@@ -156,60 +203,16 @@
             this.lblCPF.TabIndex = 1;
             this.lblCPF.Text = "CPF";
             // 
-            // txbCPF
+            // lblNome
             // 
-            this.txbCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCPF.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbCPF.Location = new System.Drawing.Point(333, 131);
-            this.txbCPF.Name = "txbCPF";
-            this.txbCPF.Size = new System.Drawing.Size(153, 21);
-            this.txbCPF.TabIndex = 3;
-            this.txbCPF.UseSystemPasswordChar = true;
-            // 
-            // txbRA
-            // 
-            this.txbRA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbRA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbRA.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbRA.Location = new System.Drawing.Point(333, 67);
-            this.txbRA.Name = "txbRA";
-            this.txbRA.Size = new System.Drawing.Size(153, 21);
-            this.txbRA.TabIndex = 6;
-            this.txbRA.UseSystemPasswordChar = true;
-            // 
-            // lblRA
-            // 
-            this.lblRA.AutoSize = true;
-            this.lblRA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRA.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRA.Location = new System.Drawing.Point(329, 44);
-            this.lblRA.Name = "lblRA";
-            this.lblRA.Size = new System.Drawing.Size(34, 20);
-            this.lblRA.TabIndex = 8;
-            this.lblRA.Text = "RA";
-            // 
-            // lblContato
-            // 
-            this.lblContato.AutoSize = true;
-            this.lblContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContato.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblContato.Location = new System.Drawing.Point(329, 170);
-            this.lblContato.Name = "lblContato";
-            this.lblContato.Size = new System.Drawing.Size(140, 20);
-            this.lblContato.TabIndex = 14;
-            this.lblContato.Text = "Telefone/Celular";
-            // 
-            // txbContato
-            // 
-            this.txbContato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbContato.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbContato.Location = new System.Drawing.Point(333, 193);
-            this.txbContato.Name = "txbContato";
-            this.txbContato.Size = new System.Drawing.Size(153, 21);
-            this.txbContato.TabIndex = 13;
-            this.txbContato.UseSystemPasswordChar = true;
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNome.Location = new System.Drawing.Point(24, 44);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(133, 20);
+            this.lblNome.TabIndex = 0;
+            this.lblNome.Text = "Nome completo";
             // 
             // CadastroAluno
             // 
@@ -219,6 +222,7 @@
             this.ClientSize = new System.Drawing.Size(592, 389);
             this.Controls.Add(this.panel1);
             this.Name = "CadastroAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Criando aluno";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -22,9 +22,25 @@ namespace gerenciamento_de_mensalidades.Model
 
         public AlunoModel() { }
 
-        public AlunoModel(int idUsuario)
+        public AlunoModel(int ra)
+        {
+            this.ra = ra;
+        }
+
+        public AlunoModel(int idUsuario, int ra)
         {
             IdUsuario = idUsuario;
+            this.ra = ra;
+        }
+
+        public AlunoModel(string nome, int ra, DateTime dataNascimento, string cpf, string cursoMatriculado, string contato)
+        {
+            this.nome = nome;
+            this.ra = ra;
+            this.dataNascimento = dataNascimento;
+            this.cpf = cpf;
+            this.cursoMatriculado = cursoMatriculado;
+            this.contato = contato;
         }
 
         public AlunoModel(int idUsuario, string nome, int ra, DateTime dataNascimento, string cpf, string cursoMatriculado, string contato)
@@ -46,7 +62,54 @@ namespace gerenciamento_de_mensalidades.Model
         public string CursoMatriculado { get => cursoMatriculado; set => cursoMatriculado = value; }
         public string Contato { get => contato; set => contato = value; }
 
-        public AlunoModel BuscarAluno()
+        public AlunoModel BuscarAlunoPorRA()
+        {
+            AlunoModel aluno = new AlunoModel();
+
+            MySqlConnection con = DbConnection.getConnection();
+            String query = "SELECT * FROM tb_alunos WHERE RA = ?RA";
+
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.Add("?RA", MySqlDbType.Int32).Value = RA;
+
+                MySqlDataReader mysqlDR = cmd.ExecuteReader();
+
+                if (mysqlDR.Read())
+                {
+                    aluno.IdAluno = Convert.ToInt32(mysqlDR["id_aluno"]);
+                    aluno.Nome = mysqlDR["nome_completo"].ToString();
+                    aluno.RA = Convert.ToInt32(mysqlDR["RA"]);
+                    aluno.DataNascimento = Convert.ToDateTime(mysqlDR["data_nascimento"]);
+                    aluno.CPF = mysqlDR["CPF"].ToString();
+                    aluno.CursoMatriculado = mysqlDR["curso_matriculado"].ToString();
+                    aluno.Contato = mysqlDR["contato"].ToString();
+                    aluno.TipoUsuario = TipoUsuario.Aluno;
+                    aluno.IdAluno = mysqlDR["id_usuario"] != DBNull.Value ? Convert.ToInt32(mysqlDR["id_usuario"]) : 0;
+                    return aluno;
+                }
+                else
+                {
+                    aluno.TipoUsuario = TipoUsuario.Undefined;
+                    return aluno;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Falha ao buscar aluno, tente novamente mais tarde", "Erro de busca",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                aluno.TipoUsuario = TipoUsuario.Undefined;
+                return aluno;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public AlunoModel BuscarAlunoPorIdUsuario()
         {
             AlunoModel aluno = new AlunoModel();
 
@@ -81,7 +144,7 @@ namespace gerenciamento_de_mensalidades.Model
             }
             catch
             {
-                MessageBox.Show("Falha ao selecionar aluno, tente novamente mais tarde", "Erro ao selecionar",
+                MessageBox.Show("Falha ao buscar aluno, tente novamente mais tarde", "Erro de busca",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 aluno.TipoUsuario = TipoUsuario.Undefined;
                 return aluno;
@@ -95,8 +158,8 @@ namespace gerenciamento_de_mensalidades.Model
         public Boolean CadastrarAluno()
         {
             MySqlConnection con = DbConnection.getConnection();
-            String query = "INSERT INTO tb_alunos(nome_completo, RA, data_nascimento, CPF, curso_matriculado, contato, id_usuario) " +
-                           "VALUES (?nome_completo, ?RA, ?data_nascimento, ?CPF, ?curso_matriculado, ?contato, ?id_usuario)";
+            String query = "INSERT INTO tb_alunos(nome_completo, RA, data_nascimento, CPF, curso_matriculado, contato) " +
+                           "VALUES (?nome_completo, ?RA, ?data_nascimento, ?CPF, ?curso_matriculado, ?contato)";
 
             try
             {
@@ -108,7 +171,6 @@ namespace gerenciamento_de_mensalidades.Model
                 cmd.Parameters.Add("?CPF", MySqlDbType.VarChar).Value = CPF;
                 cmd.Parameters.Add("?curso_matriculado", MySqlDbType.VarChar).Value = CursoMatriculado;
                 cmd.Parameters.Add("?contato", MySqlDbType.VarChar).Value = Contato;
-                cmd.Parameters.Add("?id_usuario", MySqlDbType.Int32).Value = IdUsuario;
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
 
@@ -151,6 +213,34 @@ namespace gerenciamento_de_mensalidades.Model
             catch
             {
                 MessageBox.Show("Não foi possível editar o aluno, tente novamente mais tarde", "Erro ao editar",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public Boolean VincularUsuarioAluno()
+        {
+            MySqlConnection con = DbConnection.getConnection();
+            String query = "UPDATE tb_alunos SET id_usuario = ?id_usuario WHERE RA = ?RA";
+
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.Add("?id_usuario", MySqlDbType.Int32).Value = IdUsuario;
+                cmd.Parameters.Add("?RA", MySqlDbType.Int32).Value = RA;
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possível vincular o aluno com RA '" + RA + "' a conta de usuário", "Erro ao vincular",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }

@@ -81,28 +81,25 @@ namespace gerenciamento_de_mensalidades.View.Administrador
         {
             try
             {
-                bool statusCadastro = false;
-
                 if (ValidarCampos("CF"))
                 {
                     int idUsuario = usuarioController.CadastrarUsuario(email: txbEmailCF.Text, senha: txbSenha1CF.Text, tipoUsuario: TipoUsuario.Funcionario, ativo: true);
-                    statusCadastro = idUsuario != 0 ? funcionarioController.CadastrarFuncionario(idUsuario, nome: txbNomeCF.Text, dataNascimento: dtpNascimentoCF.Value,
+                    bool statusCadastro = idUsuario != 0 ? funcionarioController.CadastrarFuncionario(idUsuario, nome: txbNomeCF.Text, dataNascimento: dtpNascimentoCF.Value,
                                                                                                  cpf: txbCPFCF.Text, contato: txbContatoCF.Text) : false;
-                }
-                
-                if (statusCadastro)
-                {
-                    panelCF.Visible = false;
-                    btnCF.Visible = true;
-                    CarregadarDadosUsuarios();
-                    MessageBox.Show("Funcionário cadastrado com sucesso!!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+
+                    if (statusCadastro)
+                    {
+                        panelCF.Visible = false;
+                        btnCF.Visible = true;
+                        CarregadarDadosUsuarios();
+                        MessageBox.Show("Funcionário cadastrado com sucesso!!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }               
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro:\n" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnAtualizarFuncionario_Click(object sender, EventArgs e)
@@ -234,7 +231,7 @@ namespace gerenciamento_de_mensalidades.View.Administrador
 
         private void SelecionarUsuarioAluno(DataGridViewRow row)
         {
-            AlunoModel aluno = alunoController.BuscarAluno(idUsuario: Convert.ToInt32(row.Cells[0].Value));
+            AlunoModel aluno = alunoController.BuscarAlunoPorIdUsuario(idUsuario: Convert.ToInt32(row.Cells[0].Value));
 
             if (aluno.TipoUsuario != TipoUsuario.Undefined)
             {

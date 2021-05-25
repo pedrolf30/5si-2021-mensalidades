@@ -25,9 +25,8 @@ namespace gerenciamento_de_mensalidades
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            CadastroUsuarioAluno cadUsuarioAluno = new CadastroUsuarioAluno();
-            this.Hide();
-            cadUsuarioAluno.Show();            
+            CadastroUsuarioAluno cadUsuarioAluno = new CadastroUsuarioAluno(this);
+            cadUsuarioAluno.ShowDialog();           
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

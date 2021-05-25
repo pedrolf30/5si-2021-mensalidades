@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using gerenciamento_de_mensalidades.Model;
+using gerenciamento_de_mensalidades.View.Aluno;
 
 namespace gerenciamento_de_mensalidades.View.Funcionario
 {
@@ -25,6 +26,12 @@ namespace gerenciamento_de_mensalidades.View.Funcionario
 
         }
 
+        private void btnCadastrarAluno_Click(object sender, EventArgs e)
+        {
+            CadastroAluno cadastroAluno = new CadastroAluno();
+            cadastroAluno.Show();
+        }
+
         private void btnSolicitacoes_Click(object sender, EventArgs e)
         {
 
@@ -38,8 +45,8 @@ namespace gerenciamento_de_mensalidades.View.Funcionario
         private void label8_Click(object sender, EventArgs e)
         {
             Login sairParaLogin = new Login();
+            this.Close();
             sairParaLogin.Show();
-            this.Visible = false;
         }
     }
 }

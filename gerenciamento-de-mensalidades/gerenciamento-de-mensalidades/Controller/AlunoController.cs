@@ -9,22 +9,35 @@ namespace gerenciamento_de_mensalidades.Controller
 {
     class AlunoController
     {
-        public AlunoModel BuscarAluno(Int32 idUsuario)
+        public AlunoModel BuscarAlunoPorRA(Int32 ra)
         {
-            AlunoModel funcionario = new AlunoModel(idUsuario);
-            return funcionario.BuscarAluno();
+            AlunoModel aluno = new AlunoModel(ra);
+            return aluno.BuscarAlunoPorRA();
         }
 
-        public Boolean CadastrarAluno(Int32 idUsuario, String nome, Int32 ra, DateTime dataNascimento, String cpf, String cursoMatriculado, String contato)
+        public AlunoModel BuscarAlunoPorIdUsuario(Int32 idUsuario)
         {
-            AlunoModel funcionario = new AlunoModel(idUsuario, nome, ra, dataNascimento, cpf, cursoMatriculado, contato);
-            return funcionario.CadastrarAluno();
+            AlunoModel aluno = new AlunoModel();
+            aluno.IdUsuario = idUsuario;
+            return aluno.BuscarAlunoPorIdUsuario();
+        }
+
+        public Boolean CadastrarAluno(String nome, Int32 ra, DateTime dataNascimento, String cpf, String cursoMatriculado, String contato)
+        {
+            AlunoModel aluno = new AlunoModel(nome, ra, dataNascimento, cpf, cursoMatriculado, contato);
+            return aluno.CadastrarAluno();
         }
 
         public Boolean AtualizarAluno(Int32 idUsuario, String nome, Int32 ra, DateTime dataNascimento, String cpf, String cursoMatriculado, String contato)
         {
-            AlunoModel funcionario = new AlunoModel(idUsuario, nome, ra, dataNascimento, cpf, cursoMatriculado, contato);
-            return funcionario.AtualizarAluno();
+            AlunoModel aluno = new AlunoModel(idUsuario, nome, ra, dataNascimento, cpf, cursoMatriculado, contato);
+            return aluno.AtualizarAluno();
+        }
+
+        public Boolean VincularUsuarioAluno(Int32 idUsuario, Int32 ra)
+        {
+            AlunoModel aluno = new AlunoModel(idUsuario, ra);
+            return aluno.VincularUsuarioAluno();
         }
     }
 }
