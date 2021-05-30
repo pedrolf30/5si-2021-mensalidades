@@ -54,6 +54,12 @@ namespace gerenciamento_de_mensalidades.Controller
             return usuario.ListarUsuarios();
         }
 
+        public UsuarioModel BuscarUsuarioPorId(Int32 idUsuario)
+        {
+            UsuarioModel usuario = new UsuarioModel(idUsuario);
+            return usuario.BuscarUsuarioPorId();
+        }
+
         public Int32 CadastrarUsuario(String email, String senha, TipoUsuario tipoUsuario, Boolean ativo)
         {
             UsuarioModel usuario = new UsuarioModel(email, senha, tipoUsuario, ativo);
@@ -64,6 +70,19 @@ namespace gerenciamento_de_mensalidades.Controller
         {
             UsuarioModel usuario = new UsuarioModel(idUsuario, email, ativo);
             return usuario.AtualizarUsuario();
+        }
+
+        public Boolean AlterarEmail(Int32 idUsuario, String email)
+        {
+            UsuarioModel usuario = new UsuarioModel(idUsuario);
+            usuario.Email = email;
+            return usuario.AlterarEmail();
+        }
+
+        public Boolean AlterarSenha(Int32 idUsuario, String senha)
+        {
+            UsuarioModel usuario = new UsuarioModel(idUsuario, senha);
+            return usuario.AlterarSenha();
         }
 
         public Boolean ExcluirUsuario(Int32 idUsuario)

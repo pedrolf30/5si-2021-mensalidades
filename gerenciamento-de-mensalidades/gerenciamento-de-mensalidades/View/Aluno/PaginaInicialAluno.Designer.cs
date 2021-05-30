@@ -31,16 +31,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.panelQtdMensalidadesAtrasadas = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblMensalidadesAtrasadas = new System.Windows.Forms.Label();
             this.btnMeuPerfil = new System.Windows.Forms.Button();
             this.btnMinhasMensalidades = new System.Windows.Forms.Button();
             this.btnSolicitacoes = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblValorTotalDividas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblNomeUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -82,22 +82,22 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Página inicial";
             // 
-            // label6
+            // lblNomeUsuario
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(561, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 16);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Nome usuário conectado";
+            this.lblNomeUsuario.AutoSize = true;
+            this.lblNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNomeUsuario.Location = new System.Drawing.Point(561, 21);
+            this.lblNomeUsuario.Name = "lblNomeUsuario";
+            this.lblNomeUsuario.Size = new System.Drawing.Size(181, 16);
+            this.lblNomeUsuario.TabIndex = 3;
+            this.lblNomeUsuario.Text = "Nome usuário conectado";
             // 
             // panelQtdMensalidadesAtrasadas
             // 
             this.panelQtdMensalidadesAtrasadas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelQtdMensalidadesAtrasadas.Controls.Add(this.label4);
-            this.panelQtdMensalidadesAtrasadas.Controls.Add(this.label2);
+            this.panelQtdMensalidadesAtrasadas.Controls.Add(this.lblMensalidadesAtrasadas);
             this.panelQtdMensalidadesAtrasadas.Location = new System.Drawing.Point(123, 105);
             this.panelQtdMensalidadesAtrasadas.Name = "panelQtdMensalidadesAtrasadas";
             this.panelQtdMensalidadesAtrasadas.Size = new System.Drawing.Size(252, 128);
@@ -114,16 +114,16 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Mensalidades atrasadas";
             // 
-            // label2
+            // lblMensalidadesAtrasadas
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(94, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 55);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "0";
+            this.lblMensalidadesAtrasadas.AutoSize = true;
+            this.lblMensalidadesAtrasadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensalidadesAtrasadas.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblMensalidadesAtrasadas.Location = new System.Drawing.Point(94, 16);
+            this.lblMensalidadesAtrasadas.Name = "lblMensalidadesAtrasadas";
+            this.lblMensalidadesAtrasadas.Size = new System.Drawing.Size(52, 55);
+            this.lblMensalidadesAtrasadas.TabIndex = 1;
+            this.lblMensalidadesAtrasadas.Text = "0";
             // 
             // btnMeuPerfil
             // 
@@ -174,7 +174,7 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblValorTotalDividas);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(425, 105);
             this.panel2.Name = "panel2";
@@ -192,16 +192,16 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Valor total de dividas";
             // 
-            // label3
+            // lblValorTotalDividas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(56, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 39);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "0,00";
+            this.lblValorTotalDividas.AutoSize = true;
+            this.lblValorTotalDividas.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorTotalDividas.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblValorTotalDividas.Location = new System.Drawing.Point(56, 16);
+            this.lblValorTotalDividas.Name = "lblValorTotalDividas";
+            this.lblValorTotalDividas.Size = new System.Drawing.Size(88, 39);
+            this.lblValorTotalDividas.TabIndex = 2;
+            this.lblValorTotalDividas.Text = "0,00";
             // 
             // label1
             // 
@@ -243,6 +243,7 @@
             this.Name = "PaginaInicialAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Página inicial";
+            this.Load += new System.EventHandler(this.PaginaInicialAluno_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelQtdMensalidadesAtrasadas.ResumeLayout(false);
@@ -258,16 +259,16 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblNomeUsuario;
         private System.Windows.Forms.Panel panelQtdMensalidadesAtrasadas;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblMensalidadesAtrasadas;
         private System.Windows.Forms.Button btnMeuPerfil;
         private System.Windows.Forms.Button btnMinhasMensalidades;
         private System.Windows.Forms.Button btnSolicitacoes;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblValorTotalDividas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;

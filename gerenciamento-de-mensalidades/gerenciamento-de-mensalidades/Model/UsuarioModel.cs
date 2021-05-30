@@ -25,6 +25,12 @@ namespace gerenciamento_de_mensalidades.Model
             this.idUsuario = idUsuario;
         }
 
+        public UsuarioModel(int idUsuario, string senha)
+        {
+            this.idUsuario = idUsuario;
+            this.senha = senha;
+        }
+
         public UsuarioModel(string email, string senha)
         {
             this.email = email;
@@ -135,6 +141,48 @@ namespace gerenciamento_de_mensalidades.Model
             }
         }
 
+        public UsuarioModel BuscarUsuarioPorId()
+        {
+            UsuarioModel usuario = new UsuarioModel();
+
+            MySqlConnection con = DbConnection.getConnection();
+            String query = "SELECT * FROM tb_usuarios WHERE id_usuario = ?id_usuario";
+
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.Add("?id_usuario", MySqlDbType.Int32).Value = IdUsuario;
+
+                MySqlDataReader mysqlDR = cmd.ExecuteReader();
+
+                if (mysqlDR.Read())
+                {
+                    usuario.IdUsuario = Convert.ToInt32(mysqlDR["id_usuario"]);
+                    usuario.Email = mysqlDR["email"].ToString();
+                    usuario.Senha = mysqlDR["senha"].ToString();
+                    usuario.Ativo = Convert.ToInt32(mysqlDR["ativo"]) == 1 ? true : false;
+                    usuario.TipoUsuario = (TipoUsuario)Convert.ToInt32(mysqlDR["id_tipo_usuario"]);
+                    return usuario;
+                }
+                else
+                {
+                    usuario.TipoUsuario = TipoUsuario.Undefined;
+                    return usuario;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Falha ao buscar usuário, tente novamente mais tarde", "Erro de busca", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                usuario.TipoUsuario = TipoUsuario.Undefined;
+                return usuario;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public Int32 CadastrarUsuario()
         {
             MySqlConnection con = DbConnection.getConnection();
@@ -193,6 +241,63 @@ namespace gerenciamento_de_mensalidades.Model
                 con.Close();
             }
         }
+
+        public Boolean AlterarEmail()
+        {
+            MySqlConnection con = DbConnection.getConnection();
+            String query = "UPDATE tb_usuarios SET email = ?email WHERE id_usuario = ?id_usuario";
+
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = Email;
+                cmd.Parameters.Add("?id_usuario", MySqlDbType.Int32).Value = IdUsuario;
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possível alterar o endereço de email, tente novamente mais tarde", "Erro ao alterar email",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public Boolean AlterarSenha()
+        {
+            MySqlConnection con = DbConnection.getConnection();
+            String query = "UPDATE tb_usuarios SET senha = ?senha WHERE id_usuario = ?id_usuario";
+
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.Add("?senha", MySqlDbType.VarChar).Value = Senha;
+                cmd.Parameters.Add("?id_usuario", MySqlDbType.Int32).Value = IdUsuario;
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possível alterar a senha, tente novamente mais tarde", "Erro ao alterar a senha",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
 
         public Boolean ExcluirUsuario()
         {
