@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using gerenciamento_de_mensalidades.Enum;
 using gerenciamento_de_mensalidades.Connection;
 using MySql.Data.MySqlClient;
 

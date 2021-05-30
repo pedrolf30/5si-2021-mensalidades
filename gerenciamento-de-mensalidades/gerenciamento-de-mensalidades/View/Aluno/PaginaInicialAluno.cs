@@ -48,7 +48,9 @@ namespace gerenciamento_de_mensalidades.View.Aluno
 
         private void btnSolicitacoes_Click(object sender, EventArgs e)
         {
-
+            SolicitacoesAluno solicitacoesAluno = new SolicitacoesAluno(usuarioAluno);
+            this.Hide();
+            solicitacoesAluno.Show();
         }
 
         private void label8_Click(object sender, EventArgs e)

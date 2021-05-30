@@ -160,7 +160,7 @@ CREATE TABLE `tb_solicitacoes` (
 --
 
 INSERT INTO `tb_solicitacoes` (`id_solicitacao`, `id_aluno`, `id_funcionario`, `categoria`, `descricao`, `data_solicitacao`, `status`, `resposta`) VALUES
-(1, 2, 1, 'Solicitação de Bolsa', 'Bom dia, estou abrindo essa solicitação para pedir uma bolsa para o curso de direito', '2021-05-16', 'Pendente', NULL);
+(1, 2, 1, 'Solicitação de Bolsa', 'Bom dia, estou abrindo essa solicitação para pedir uma bolsa para o curso de direito', '2021-05-16', 'Aprovado', 'Bom dia Aluno Teste, a faculdade decidiu lhe conceder uma bolsa de 35% para o curso de direito');
 
 -- --------------------------------------------------------
 

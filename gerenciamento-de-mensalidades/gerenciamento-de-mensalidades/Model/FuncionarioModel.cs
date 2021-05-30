@@ -14,7 +14,7 @@ namespace gerenciamento_de_mensalidades.Model
     {
         private Int32 idFuncionario;
         private String nome;
-        private DateTime dataNascimento;
+        private DateTime? dataNascimento;
         private String cpf;
         private String contato;
 
@@ -36,7 +36,7 @@ namespace gerenciamento_de_mensalidades.Model
 
         public int IdFuncionario { get => idFuncionario; set => idFuncionario = value; }
         public string Nome { get => nome; set => nome = value; }
-        public DateTime DataNascimento { get => dataNascimento; set => dataNascimento = value; }
+        public DateTime? DataNascimento { get => dataNascimento; set => dataNascimento = value; }
         public string CPF { get => cpf; set => cpf = value; }
         public string Contato { get => contato; set => contato = value; }
 
@@ -95,7 +95,7 @@ namespace gerenciamento_de_mensalidades.Model
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 cmd.Parameters.Add("?nome_completo", MySqlDbType.VarChar).Value = Nome;
-                cmd.Parameters.Add("?data_nascimento", MySqlDbType.Date).Value = DataNascimento.Date;
+                cmd.Parameters.Add("?data_nascimento", MySqlDbType.Date).Value = DataNascimento.Value.Date;
                 cmd.Parameters.Add("?CPF", MySqlDbType.VarChar).Value = CPF;
                 cmd.Parameters.Add("?contato", MySqlDbType.VarChar).Value = Contato;
                 cmd.Parameters.Add("?id_usuario", MySqlDbType.Int32).Value = IdUsuario;
@@ -126,7 +126,7 @@ namespace gerenciamento_de_mensalidades.Model
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 cmd.Parameters.Add("?nome_completo", MySqlDbType.VarChar).Value = Nome;
-                cmd.Parameters.Add("?data_nascimento", MySqlDbType.Date).Value = DataNascimento.Date;
+                cmd.Parameters.Add("?data_nascimento", MySqlDbType.Date).Value = DataNascimento.Value.Date;
                 cmd.Parameters.Add("?CPF", MySqlDbType.VarChar).Value = CPF;
                 cmd.Parameters.Add("?contato", MySqlDbType.VarChar).Value = Contato;
                 cmd.Parameters.Add("?id_usuario", MySqlDbType.Int32).Value = IdUsuario;
