@@ -98,13 +98,46 @@ namespace gerenciamento_de_mensalidades.Model
         public static Int32 BuscarTotalMensalidadesAtrasadasAluno(Int32 idAluno)
         {
             MySqlConnection con = DbConnection.getConnection();
-            String query = "SELECT COUNT(*) AS TotalMensalidadesAtrasadas FROM tb_mensalidades WHERE id_aluno = ?id_aluno AND NOW() > data_vencimento AND pago = 0";
+            String query = "SELECT COUNT(*) AS TotalMensalidadesAtrasadasAluno FROM tb_mensalidades WHERE id_aluno = ?id_aluno AND NOW() > data_vencimento AND pago = 0";
 
             try
             {
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand(query, con);
                 cmd.Parameters.Add("?id_aluno", MySqlDbType.Int32).Value = idAluno;
+
+                MySqlDataReader mysqlDR = cmd.ExecuteReader();
+
+                if (mysqlDR.Read())
+                {
+                    return Convert.ToInt32(mysqlDR["TotalMensalidadesAtrasadasAluno"]);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Falha buscar o total de mensalidades atrasadas, tente novamente mais tarde", "Erro na conexão com o servidor",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public static Int32 BuscarTotalMensalidadesAtrasadas()
+        {
+            MySqlConnection con = DbConnection.getConnection();
+            String query = "SELECT COUNT(*) AS TotalMensalidadesAtrasadas FROM tb_mensalidades WHERE pago = 0 AND NOW() > data_vencimento";
+
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
 
                 MySqlDataReader mysqlDR = cmd.ExecuteReader();
 
@@ -132,7 +165,7 @@ namespace gerenciamento_de_mensalidades.Model
         public static Double BuscarValorTotalDividasAluno(Int32 idAluno)
         {
             MySqlConnection con = DbConnection.getConnection();
-            String query = "SELECT SUM(valor) AS ValorTotalDividas FROM tb_mensalidades WHERE id_aluno = ?id_aluno AND NOW() > data_vencimento AND pago = 0";
+            String query = "SELECT SUM(valor) AS ValorTotalDividasAluno FROM tb_mensalidades WHERE id_aluno = ?id_aluno AND NOW() > data_vencimento AND pago = 0";
 
             try
             {
@@ -144,7 +177,7 @@ namespace gerenciamento_de_mensalidades.Model
 
                 if (mysqlDR.Read())
                 {
-                    return Convert.ToDouble(mysqlDR["ValorTotalDividas"]);
+                    return Convert.ToDouble(mysqlDR["ValorTotalDividasAluno"]);
                 }
                 else
                 {
@@ -156,6 +189,71 @@ namespace gerenciamento_de_mensalidades.Model
                 MessageBox.Show("Falha buscar o valor total de dividas, tente novamente mais tarde", "Erro na conexão com o servidor",
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0.00;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public static Double BuscarValorTotalDividas()
+        {
+            MySqlConnection con = DbConnection.getConnection();
+            String query = "SELECT SUM(valor) AS ValorTotalDividasAlunos FROM tb_mensalidades WHERE NOW() > data_vencimento AND pago = 0";
+
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+
+                MySqlDataReader mysqlDR = cmd.ExecuteReader();
+
+                if (mysqlDR.Read())
+                {
+                    return Convert.ToDouble(mysqlDR["ValorTotalDividasAlunos"]);
+                }
+                else
+                {
+                    return 0.00;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Falha buscar o valor total de dividas, tente novamente mais tarde", "Erro na conexão com o servidor",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0.00;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }        
+
+        public static Int32 BuscarTotalAlunosEndividados()
+        {
+            Int32 TotalAlunosEndividados = 0;
+
+            MySqlConnection con = DbConnection.getConnection();
+            String query = "SELECT * FROM tb_mensalidades WHERE pago = 0 AND NOW() > data_vencimento GROUP BY id_aluno;";
+
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+
+                MySqlDataReader mysqlDR = cmd.ExecuteReader();
+
+                if (mysqlDR != null)
+                    while (mysqlDR.Read())
+                        TotalAlunosEndividados++;
+
+                return TotalAlunosEndividados;
+            }
+            catch
+            {
+                MessageBox.Show("Falha buscar total de alunos com mensalidades atrasadas, tente novamente mais tarde", "Erro na conexão com o servidor",
+                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return TotalAlunosEndividados;
             }
             finally
             {

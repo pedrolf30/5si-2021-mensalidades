@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txbNascimento = new System.Windows.Forms.TextBox();
@@ -67,7 +67,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblNomeUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -85,16 +85,16 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Meus dados";
             // 
-            // label6
+            // lblNomeUsuario
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(561, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 16);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Nome usuário conectado";
+            this.lblNomeUsuario.AutoSize = true;
+            this.lblNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNomeUsuario.Location = new System.Drawing.Point(561, 21);
+            this.lblNomeUsuario.Name = "lblNomeUsuario";
+            this.lblNomeUsuario.Size = new System.Drawing.Size(181, 16);
+            this.lblNomeUsuario.TabIndex = 3;
+            this.lblNomeUsuario.Text = "Nome usuário conectado";
             // 
             // btnVoltar
             // 
@@ -135,7 +135,6 @@
             // txbNascimento
             // 
             this.txbNascimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbNascimento.Enabled = false;
             this.txbNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNascimento.ForeColor = System.Drawing.SystemColors.Control;
             this.txbNascimento.Location = new System.Drawing.Point(103, 108);
@@ -195,7 +194,6 @@
             // txbEmail
             // 
             this.txbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbEmail.Enabled = false;
             this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbEmail.ForeColor = System.Drawing.SystemColors.Control;
             this.txbEmail.Location = new System.Drawing.Point(62, 159);
@@ -207,7 +205,6 @@
             // txbContato
             // 
             this.txbContato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbContato.Enabled = false;
             this.txbContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbContato.ForeColor = System.Drawing.SystemColors.Control;
             this.txbContato.Location = new System.Drawing.Point(74, 133);
@@ -219,7 +216,6 @@
             // txbCPF
             // 
             this.txbCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbCPF.Enabled = false;
             this.txbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCPF.ForeColor = System.Drawing.SystemColors.Control;
             this.txbCPF.Location = new System.Drawing.Point(47, 77);
@@ -231,7 +227,6 @@
             // txbNome
             // 
             this.txbNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbNome.Enabled = false;
             this.txbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNome.ForeColor = System.Drawing.SystemColors.Control;
             this.txbNome.Location = new System.Drawing.Point(62, 49);
@@ -409,7 +404,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "PerfilFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meu Perfil";
+            this.Load += new System.EventHandler(this.PerfilFuncionario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -426,7 +423,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblNomeUsuario;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txbNascimento;

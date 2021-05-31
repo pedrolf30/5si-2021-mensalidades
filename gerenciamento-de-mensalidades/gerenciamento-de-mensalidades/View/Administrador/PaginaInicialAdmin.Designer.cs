@@ -31,19 +31,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblEmailCurrentUser = new System.Windows.Forms.Label();
+            this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.panelQtdMensalidadesAtrasadas = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalAlunosEndividados = new System.Windows.Forms.Label();
             this.btnSolicitacoes = new System.Windows.Forms.Button();
             this.btnAlunos = new System.Windows.Forms.Button();
             this.btnMeuPerfil = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotalMensalidadesAtrasadas = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblTotalDividaAlunos = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.lblEmailCurrentUser);
+            this.panel1.Controls.Add(this.lblNomeUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -87,22 +87,22 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Página inicial";
             // 
-            // lblEmailCurrentUser
+            // lblNomeUsuario
             // 
-            this.lblEmailCurrentUser.AutoSize = true;
-            this.lblEmailCurrentUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailCurrentUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEmailCurrentUser.Location = new System.Drawing.Point(570, 21);
-            this.lblEmailCurrentUser.Name = "lblEmailCurrentUser";
-            this.lblEmailCurrentUser.Size = new System.Drawing.Size(201, 16);
-            this.lblEmailCurrentUser.TabIndex = 3;
-            this.lblEmailCurrentUser.Text = "Email do usuário conectado";
+            this.lblNomeUsuario.AutoSize = true;
+            this.lblNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNomeUsuario.Location = new System.Drawing.Point(570, 21);
+            this.lblNomeUsuario.Name = "lblNomeUsuario";
+            this.lblNomeUsuario.Size = new System.Drawing.Size(203, 16);
+            this.lblNomeUsuario.TabIndex = 3;
+            this.lblNomeUsuario.Text = "Nome do usuário conectado";
             // 
             // panelQtdMensalidadesAtrasadas
             // 
             this.panelQtdMensalidadesAtrasadas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelQtdMensalidadesAtrasadas.Controls.Add(this.label4);
-            this.panelQtdMensalidadesAtrasadas.Controls.Add(this.label2);
+            this.panelQtdMensalidadesAtrasadas.Controls.Add(this.lblTotalAlunosEndividados);
             this.panelQtdMensalidadesAtrasadas.Location = new System.Drawing.Point(12, 123);
             this.panelQtdMensalidadesAtrasadas.Name = "panelQtdMensalidadesAtrasadas";
             this.panelQtdMensalidadesAtrasadas.Size = new System.Drawing.Size(252, 128);
@@ -119,16 +119,16 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Alunos com mensalidades atrasadas";
             // 
-            // label2
+            // lblTotalAlunosEndividados
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(98, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 55);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "0";
+            this.lblTotalAlunosEndividados.AutoSize = true;
+            this.lblTotalAlunosEndividados.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAlunosEndividados.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTotalAlunosEndividados.Location = new System.Drawing.Point(98, 16);
+            this.lblTotalAlunosEndividados.Name = "lblTotalAlunosEndividados";
+            this.lblTotalAlunosEndividados.Size = new System.Drawing.Size(52, 55);
+            this.lblTotalAlunosEndividados.TabIndex = 1;
+            this.lblTotalAlunosEndividados.Text = "0";
             // 
             // btnSolicitacoes
             // 
@@ -179,7 +179,7 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblTotalMensalidadesAtrasadas);
             this.panel2.Location = new System.Drawing.Point(279, 123);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(252, 128);
@@ -196,22 +196,22 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Total de mensalidades atrasadas";
             // 
-            // label3
+            // lblTotalMensalidadesAtrasadas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(98, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 55);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "0";
+            this.lblTotalMensalidadesAtrasadas.AutoSize = true;
+            this.lblTotalMensalidadesAtrasadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalMensalidadesAtrasadas.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTotalMensalidadesAtrasadas.Location = new System.Drawing.Point(98, 16);
+            this.lblTotalMensalidadesAtrasadas.Name = "lblTotalMensalidadesAtrasadas";
+            this.lblTotalMensalidadesAtrasadas.Size = new System.Drawing.Size(52, 55);
+            this.lblTotalMensalidadesAtrasadas.TabIndex = 1;
+            this.lblTotalMensalidadesAtrasadas.Text = "0";
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.lblTotalDividaAlunos);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Location = new System.Drawing.Point(549, 123);
             this.panel3.Name = "panel3";
@@ -229,16 +229,16 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Divida total dos alunos";
             // 
-            // label8
+            // lblTotalDividaAlunos
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(56, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 39);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "0,00";
+            this.lblTotalDividaAlunos.AutoSize = true;
+            this.lblTotalDividaAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDividaAlunos.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTotalDividaAlunos.Location = new System.Drawing.Point(56, 16);
+            this.lblTotalDividaAlunos.Name = "lblTotalDividaAlunos";
+            this.lblTotalDividaAlunos.Size = new System.Drawing.Size(88, 39);
+            this.lblTotalDividaAlunos.TabIndex = 2;
+            this.lblTotalDividaAlunos.Text = "0,00";
             // 
             // label9
             // 
@@ -315,19 +315,19 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblEmailCurrentUser;
+        private System.Windows.Forms.Label lblNomeUsuario;
         private System.Windows.Forms.Panel panelQtdMensalidadesAtrasadas;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTotalAlunosEndividados;
         private System.Windows.Forms.Button btnSolicitacoes;
         private System.Windows.Forms.Button btnAlunos;
         private System.Windows.Forms.Button btnMeuPerfil;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotalMensalidadesAtrasadas;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTotalDividaAlunos;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Label label10;

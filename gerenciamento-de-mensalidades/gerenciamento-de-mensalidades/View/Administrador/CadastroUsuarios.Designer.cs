@@ -31,10 +31,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblEmailCurrentUser = new System.Windows.Forms.Label();
+            this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoDeUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.panelAluno = new System.Windows.Forms.Panel();
+            this.txbIdUsuarioAluno = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.dtpNascimentoAluno = new System.Windows.Forms.DateTimePicker();
+            this.cbCursoAluno = new System.Windows.Forms.ComboBox();
+            this.txbAtivoAluno = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cbAtivoAluno = new System.Windows.Forms.ComboBox();
+            this.btnAtualizarAluno = new System.Windows.Forms.Button();
+            this.btnExcluirAluno = new System.Windows.Forms.Button();
+            this.btnEditarAluno = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txbCursoAluno = new System.Windows.Forms.TextBox();
             this.lblCurso = new System.Windows.Forms.Label();
@@ -88,20 +102,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.btnCF = new System.Windows.Forms.Button();
-            this.btnAtualizarAluno = new System.Windows.Forms.Button();
-            this.btnExcluirAluno = new System.Windows.Forms.Button();
-            this.btnEditarAluno = new System.Windows.Forms.Button();
-            this.txbAtivoAluno = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.cbAtivoAluno = new System.Windows.Forms.ComboBox();
-            this.cbCursoAluno = new System.Windows.Forms.ComboBox();
-            this.dtpNascimentoAluno = new System.Windows.Forms.DateTimePicker();
-            this.txbIdUsuarioAluno = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoDeUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelFuncionario = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -115,7 +115,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.lblEmailCurrentUser);
+            this.panel1.Controls.Add(this.lblNomeUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -144,16 +144,16 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Usuários";
             // 
-            // lblEmailCurrentUser
+            // lblNomeUsuario
             // 
-            this.lblEmailCurrentUser.AutoSize = true;
-            this.lblEmailCurrentUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailCurrentUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEmailCurrentUser.Location = new System.Drawing.Point(570, 21);
-            this.lblEmailCurrentUser.Name = "lblEmailCurrentUser";
-            this.lblEmailCurrentUser.Size = new System.Drawing.Size(201, 16);
-            this.lblEmailCurrentUser.TabIndex = 3;
-            this.lblEmailCurrentUser.Text = "Email do usuário conectado";
+            this.lblNomeUsuario.AutoSize = true;
+            this.lblNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNomeUsuario.Location = new System.Drawing.Point(570, 21);
+            this.lblNomeUsuario.Name = "lblNomeUsuario";
+            this.lblNomeUsuario.Size = new System.Drawing.Size(203, 16);
+            this.lblNomeUsuario.TabIndex = 3;
+            this.lblNomeUsuario.Text = "Nome do usuário conectado";
             // 
             // dgvUsuarios
             // 
@@ -174,6 +174,34 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(406, 336);
             this.dgvUsuarios.TabIndex = 48;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 150;
+            // 
+            // TipoDeUsuario
+            // 
+            this.TipoDeUsuario.HeaderText = "Tipo de Usuário";
+            this.TipoDeUsuario.Name = "TipoDeUsuario";
+            this.TipoDeUsuario.ReadOnly = true;
+            this.TipoDeUsuario.Width = 90;
+            // 
+            // Ativo
+            // 
+            this.Ativo.HeaderText = "Ativo";
+            this.Ativo.Name = "Ativo";
+            this.Ativo.ReadOnly = true;
+            this.Ativo.Width = 50;
             // 
             // btnVoltar
             // 
@@ -221,6 +249,135 @@
             this.panelAluno.Size = new System.Drawing.Size(341, 378);
             this.panelAluno.TabIndex = 120;
             this.panelAluno.Visible = false;
+            // 
+            // txbIdUsuarioAluno
+            // 
+            this.txbIdUsuarioAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbIdUsuarioAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIdUsuarioAluno.ForeColor = System.Drawing.SystemColors.Control;
+            this.txbIdUsuarioAluno.Location = new System.Drawing.Point(113, 78);
+            this.txbIdUsuarioAluno.Name = "txbIdUsuarioAluno";
+            this.txbIdUsuarioAluno.ReadOnly = true;
+            this.txbIdUsuarioAluno.Size = new System.Drawing.Size(216, 21);
+            this.txbIdUsuarioAluno.TabIndex = 150;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.Control;
+            this.label22.Location = new System.Drawing.Point(4, 78);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(107, 16);
+            this.label22.TabIndex = 149;
+            this.label22.Text = "ID de Usuário:";
+            // 
+            // dtpNascimentoAluno
+            // 
+            this.dtpNascimentoAluno.Location = new System.Drawing.Point(102, 164);
+            this.dtpNascimentoAluno.Name = "dtpNascimentoAluno";
+            this.dtpNascimentoAluno.Size = new System.Drawing.Size(227, 20);
+            this.dtpNascimentoAluno.TabIndex = 148;
+            this.dtpNascimentoAluno.Visible = false;
+            // 
+            // cbCursoAluno
+            // 
+            this.cbCursoAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbCursoAluno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCursoAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCursoAluno.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbCursoAluno.FormattingEnabled = true;
+            this.cbCursoAluno.Items.AddRange(new object[] {
+            "Sistemas de Informação",
+            "Direito",
+            "Pedagogia",
+            "Psicologia"});
+            this.cbCursoAluno.Location = new System.Drawing.Point(58, 260);
+            this.cbCursoAluno.Name = "cbCursoAluno";
+            this.cbCursoAluno.Size = new System.Drawing.Size(273, 21);
+            this.cbCursoAluno.TabIndex = 146;
+            this.cbCursoAluno.Visible = false;
+            // 
+            // txbAtivoAluno
+            // 
+            this.txbAtivoAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbAtivoAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbAtivoAluno.ForeColor = System.Drawing.SystemColors.Control;
+            this.txbAtivoAluno.Location = new System.Drawing.Point(56, 291);
+            this.txbAtivoAluno.Name = "txbAtivoAluno";
+            this.txbAtivoAluno.ReadOnly = true;
+            this.txbAtivoAluno.Size = new System.Drawing.Size(273, 21);
+            this.txbAtivoAluno.TabIndex = 147;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.Control;
+            this.label21.Location = new System.Drawing.Point(6, 294);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(47, 16);
+            this.label21.TabIndex = 146;
+            this.label21.Text = "Ativo:";
+            // 
+            // cbAtivoAluno
+            // 
+            this.cbAtivoAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbAtivoAluno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAtivoAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbAtivoAluno.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbAtivoAluno.FormattingEnabled = true;
+            this.cbAtivoAluno.Items.AddRange(new object[] {
+            "Sim",
+            "Não"});
+            this.cbAtivoAluno.Location = new System.Drawing.Point(56, 289);
+            this.cbAtivoAluno.Name = "cbAtivoAluno";
+            this.cbAtivoAluno.Size = new System.Drawing.Size(273, 21);
+            this.cbAtivoAluno.TabIndex = 145;
+            this.cbAtivoAluno.Visible = false;
+            // 
+            // btnAtualizarAluno
+            // 
+            this.btnAtualizarAluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarAluno.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAtualizarAluno.Location = new System.Drawing.Point(122, 334);
+            this.btnAtualizarAluno.Name = "btnAtualizarAluno";
+            this.btnAtualizarAluno.Size = new System.Drawing.Size(101, 26);
+            this.btnAtualizarAluno.TabIndex = 143;
+            this.btnAtualizarAluno.Text = "Salvar";
+            this.btnAtualizarAluno.UseVisualStyleBackColor = true;
+            this.btnAtualizarAluno.Visible = false;
+            this.btnAtualizarAluno.Click += new System.EventHandler(this.btnAtualizarAluno_Click);
+            // 
+            // btnExcluirAluno
+            // 
+            this.btnExcluirAluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluirAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirAluno.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnExcluirAluno.Location = new System.Drawing.Point(191, 334);
+            this.btnExcluirAluno.Name = "btnExcluirAluno";
+            this.btnExcluirAluno.Size = new System.Drawing.Size(115, 26);
+            this.btnExcluirAluno.TabIndex = 144;
+            this.btnExcluirAluno.Text = "Excluir";
+            this.btnExcluirAluno.UseVisualStyleBackColor = true;
+            this.btnExcluirAluno.Click += new System.EventHandler(this.btnExcluirAluno_Click);
+            // 
+            // btnEditarAluno
+            // 
+            this.btnEditarAluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarAluno.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEditarAluno.Location = new System.Drawing.Point(45, 335);
+            this.btnEditarAluno.Name = "btnEditarAluno";
+            this.btnEditarAluno.Size = new System.Drawing.Size(115, 26);
+            this.btnEditarAluno.TabIndex = 142;
+            this.btnEditarAluno.Text = "Editar";
+            this.btnEditarAluno.UseVisualStyleBackColor = true;
+            this.btnEditarAluno.Click += new System.EventHandler(this.btnEditarAluno_Click);
             // 
             // label1
             // 
@@ -828,163 +985,6 @@
             this.btnCF.UseVisualStyleBackColor = true;
             this.btnCF.Click += new System.EventHandler(this.btnCF_Click);
             // 
-            // btnAtualizarAluno
-            // 
-            this.btnAtualizarAluno.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtualizarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizarAluno.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAtualizarAluno.Location = new System.Drawing.Point(122, 334);
-            this.btnAtualizarAluno.Name = "btnAtualizarAluno";
-            this.btnAtualizarAluno.Size = new System.Drawing.Size(101, 26);
-            this.btnAtualizarAluno.TabIndex = 143;
-            this.btnAtualizarAluno.Text = "Salvar";
-            this.btnAtualizarAluno.UseVisualStyleBackColor = true;
-            this.btnAtualizarAluno.Visible = false;
-            this.btnAtualizarAluno.Click += new System.EventHandler(this.btnAtualizarAluno_Click);
-            // 
-            // btnExcluirAluno
-            // 
-            this.btnExcluirAluno.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcluirAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirAluno.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnExcluirAluno.Location = new System.Drawing.Point(191, 334);
-            this.btnExcluirAluno.Name = "btnExcluirAluno";
-            this.btnExcluirAluno.Size = new System.Drawing.Size(115, 26);
-            this.btnExcluirAluno.TabIndex = 144;
-            this.btnExcluirAluno.Text = "Excluir";
-            this.btnExcluirAluno.UseVisualStyleBackColor = true;
-            this.btnExcluirAluno.Click += new System.EventHandler(this.btnExcluirAluno_Click);
-            // 
-            // btnEditarAluno
-            // 
-            this.btnEditarAluno.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarAluno.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEditarAluno.Location = new System.Drawing.Point(45, 335);
-            this.btnEditarAluno.Name = "btnEditarAluno";
-            this.btnEditarAluno.Size = new System.Drawing.Size(115, 26);
-            this.btnEditarAluno.TabIndex = 142;
-            this.btnEditarAluno.Text = "Editar";
-            this.btnEditarAluno.UseVisualStyleBackColor = true;
-            this.btnEditarAluno.Click += new System.EventHandler(this.btnEditarAluno_Click);
-            // 
-            // txbAtivoAluno
-            // 
-            this.txbAtivoAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbAtivoAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbAtivoAluno.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbAtivoAluno.Location = new System.Drawing.Point(56, 291);
-            this.txbAtivoAluno.Name = "txbAtivoAluno";
-            this.txbAtivoAluno.ReadOnly = true;
-            this.txbAtivoAluno.Size = new System.Drawing.Size(273, 21);
-            this.txbAtivoAluno.TabIndex = 147;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(6, 294);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(47, 16);
-            this.label21.TabIndex = 146;
-            this.label21.Text = "Ativo:";
-            // 
-            // cbAtivoAluno
-            // 
-            this.cbAtivoAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.cbAtivoAluno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAtivoAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbAtivoAluno.ForeColor = System.Drawing.SystemColors.Control;
-            this.cbAtivoAluno.FormattingEnabled = true;
-            this.cbAtivoAluno.Items.AddRange(new object[] {
-            "Sim",
-            "Não"});
-            this.cbAtivoAluno.Location = new System.Drawing.Point(56, 289);
-            this.cbAtivoAluno.Name = "cbAtivoAluno";
-            this.cbAtivoAluno.Size = new System.Drawing.Size(273, 21);
-            this.cbAtivoAluno.TabIndex = 145;
-            this.cbAtivoAluno.Visible = false;
-            // 
-            // cbCursoAluno
-            // 
-            this.cbCursoAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.cbCursoAluno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCursoAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCursoAluno.ForeColor = System.Drawing.SystemColors.Control;
-            this.cbCursoAluno.FormattingEnabled = true;
-            this.cbCursoAluno.Items.AddRange(new object[] {
-            "Sistemas de Informação",
-            "Direito",
-            "Pedagogia",
-            "Psicologia"});
-            this.cbCursoAluno.Location = new System.Drawing.Point(58, 260);
-            this.cbCursoAluno.Name = "cbCursoAluno";
-            this.cbCursoAluno.Size = new System.Drawing.Size(273, 21);
-            this.cbCursoAluno.TabIndex = 146;
-            this.cbCursoAluno.Visible = false;
-            // 
-            // dtpNascimentoAluno
-            // 
-            this.dtpNascimentoAluno.Location = new System.Drawing.Point(102, 164);
-            this.dtpNascimentoAluno.Name = "dtpNascimentoAluno";
-            this.dtpNascimentoAluno.Size = new System.Drawing.Size(227, 20);
-            this.dtpNascimentoAluno.TabIndex = 148;
-            this.dtpNascimentoAluno.Visible = false;
-            // 
-            // txbIdUsuarioAluno
-            // 
-            this.txbIdUsuarioAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbIdUsuarioAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdUsuarioAluno.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbIdUsuarioAluno.Location = new System.Drawing.Point(113, 78);
-            this.txbIdUsuarioAluno.Name = "txbIdUsuarioAluno";
-            this.txbIdUsuarioAluno.ReadOnly = true;
-            this.txbIdUsuarioAluno.Size = new System.Drawing.Size(216, 21);
-            this.txbIdUsuarioAluno.TabIndex = 150;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.Control;
-            this.label22.Location = new System.Drawing.Point(4, 78);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(107, 16);
-            this.label22.TabIndex = 149;
-            this.label22.Text = "ID de Usuário:";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 50;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 150;
-            // 
-            // TipoDeUsuario
-            // 
-            this.TipoDeUsuario.HeaderText = "Tipo de Usuário";
-            this.TipoDeUsuario.Name = "TipoDeUsuario";
-            this.TipoDeUsuario.ReadOnly = true;
-            this.TipoDeUsuario.Width = 90;
-            // 
-            // Ativo
-            // 
-            this.Ativo.HeaderText = "Ativo";
-            this.Ativo.Name = "Ativo";
-            this.Ativo.ReadOnly = true;
-            this.Ativo.Width = 50;
-            // 
             // panelFuncionario
             // 
             this.panelFuncionario.Controls.Add(this.dtpNascimentoFuncionario);
@@ -1048,7 +1048,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblEmailCurrentUser;
+        private System.Windows.Forms.Label lblNomeUsuario;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Panel panelAluno;

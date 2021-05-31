@@ -19,9 +19,24 @@ namespace gerenciamento_de_mensalidades.Controller
             return MensalidadeModel.BuscarTotalMensalidadesAtrasadasAluno(idAluno);
         }
 
+        public Int32 BuscarTotalMensalidadesAtrasadas()
+        {
+            return MensalidadeModel.BuscarTotalMensalidadesAtrasadas();
+        }
+
         public Double BuscarValorTotalDividasAluno(Int32 idAluno)
         {
             return MensalidadeModel.BuscarValorTotalDividasAluno(idAluno);
+        }
+
+        public Double BuscarValorTotalDividas()
+        {
+            return MensalidadeModel.BuscarValorTotalDividas();
+        }
+
+        public Int32 BuscarTotalAlunosEndividados()
+        {
+            return MensalidadeModel.BuscarTotalAlunosEndividados();
         }
     }
 }

@@ -10,7 +10,7 @@ using gerenciamento_de_mensalidades.Enum;
 
 namespace gerenciamento_de_mensalidades.Model
 {
-    class FuncionarioModel : UsuarioModel
+    public class FuncionarioModel : UsuarioModel
     {
         private Int32 idFuncionario;
         private String nome;

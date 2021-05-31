@@ -112,7 +112,9 @@ CREATE TABLE `tb_funcionarios` (
 
 INSERT INTO `tb_funcionarios` (`id_funcionario`, `nome_completo`, `data_nascimento`, `CPF`, `contato`, `id_usuario`) VALUES
 (1, 'Samuel P. A. Cezar', '2001-07-18', '302.452.174-21', '(19) 3896-5331', 3),
-(2, 'João da Silva', '2005-05-20', '398.902.819-02', '(19) 9 9748-9182', 5);
+(2, 'João da Silva', '2005-05-20', '398.902.819-02', '(19) 9 9748-9182', 5),
+(3, 'Admin Teste', '2005-05-20', '398.902.819-02', '(19) 9 9748-9182', 2);
+;
 
 -- --------------------------------------------------------
 

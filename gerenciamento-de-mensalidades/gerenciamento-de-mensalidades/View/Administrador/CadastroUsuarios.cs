@@ -15,25 +15,25 @@ namespace gerenciamento_de_mensalidades.View.Administrador
 {
     public partial class CadastroUsuarios : Form
     {
-        UsuarioModel currentUser; 
-        UsuarioController usuarioController = new UsuarioController();
-        FuncionarioController funcionarioController = new FuncionarioController();
+        FuncionarioModel usuarioAdministrador; 
         AlunoController alunoController = new AlunoController();
-        public CadastroUsuarios(UsuarioModel usuario)
+        FuncionarioController funcionarioController = new FuncionarioController();
+        UsuarioController usuarioController = new UsuarioController();
+        public CadastroUsuarios(FuncionarioModel funcionario)
         {
             InitializeComponent();
-            currentUser = usuario;
+            usuarioAdministrador = funcionario;
         }
 
         private void CadastroUsuarios_Load(object sender, EventArgs e)
         {
-            lblEmailCurrentUser.Text = currentUser.Email;
+            lblNomeUsuario.Text = usuarioAdministrador.Nome;
             CarregadarDadosUsuarios();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            usuarioController.VoltarParaPaginaInicial(currentUser, this);
+            usuarioController.VoltarParaPaginaInicial(usuarioAdministrador, this);
         }
 
         private void btnEditarFuncionario_Click(object sender, EventArgs e)

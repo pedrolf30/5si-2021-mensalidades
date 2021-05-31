@@ -31,16 +31,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.btnSolicitacoes = new System.Windows.Forms.Button();
             this.btnAlunos = new System.Windows.Forms.Button();
             this.btnMeuPerfil = new System.Windows.Forms.Button();
             this.panelQtdMensalidadesAtrasadas = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalAlunosEndividados = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotalMensalidadesAtrasadas = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnCadastrarAluno = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblNomeUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -82,16 +82,16 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Página inicial";
             // 
-            // label6
+            // lblNomeUsuario
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(655, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 16);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Nome usuário conectado";
+            this.lblNomeUsuario.AutoSize = true;
+            this.lblNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNomeUsuario.Location = new System.Drawing.Point(655, 21);
+            this.lblNomeUsuario.Name = "lblNomeUsuario";
+            this.lblNomeUsuario.Size = new System.Drawing.Size(181, 16);
+            this.lblNomeUsuario.TabIndex = 3;
+            this.lblNomeUsuario.Text = "Nome usuário conectado";
             // 
             // btnSolicitacoes
             // 
@@ -142,7 +142,7 @@
             // 
             this.panelQtdMensalidadesAtrasadas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelQtdMensalidadesAtrasadas.Controls.Add(this.label4);
-            this.panelQtdMensalidadesAtrasadas.Controls.Add(this.label2);
+            this.panelQtdMensalidadesAtrasadas.Controls.Add(this.lblTotalAlunosEndividados);
             this.panelQtdMensalidadesAtrasadas.Location = new System.Drawing.Point(121, 116);
             this.panelQtdMensalidadesAtrasadas.Name = "panelQtdMensalidadesAtrasadas";
             this.panelQtdMensalidadesAtrasadas.Size = new System.Drawing.Size(298, 128);
@@ -159,22 +159,22 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Alunos com mensalidades atrasadas";
             // 
-            // label2
+            // lblTotalAlunosEndividados
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(126, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 55);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "0";
+            this.lblTotalAlunosEndividados.AutoSize = true;
+            this.lblTotalAlunosEndividados.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAlunosEndividados.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTotalAlunosEndividados.Location = new System.Drawing.Point(126, 16);
+            this.lblTotalAlunosEndividados.Name = "lblTotalAlunosEndividados";
+            this.lblTotalAlunosEndividados.Size = new System.Drawing.Size(52, 55);
+            this.lblTotalAlunosEndividados.TabIndex = 1;
+            this.lblTotalAlunosEndividados.Text = "0";
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblTotalMensalidadesAtrasadas);
             this.panel2.Location = new System.Drawing.Point(473, 116);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(289, 128);
@@ -191,20 +191,21 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Total de mensalidades atrasadas";
             // 
-            // label3
+            // lblTotalMensalidadesAtrasadas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(116, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 55);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "0";
+            this.lblTotalMensalidadesAtrasadas.AutoSize = true;
+            this.lblTotalMensalidadesAtrasadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalMensalidadesAtrasadas.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblTotalMensalidadesAtrasadas.Location = new System.Drawing.Point(116, 16);
+            this.lblTotalMensalidadesAtrasadas.Name = "lblTotalMensalidadesAtrasadas";
+            this.lblTotalMensalidadesAtrasadas.Size = new System.Drawing.Size(52, 55);
+            this.lblTotalMensalidadesAtrasadas.TabIndex = 1;
+            this.lblTotalMensalidadesAtrasadas.Text = "0";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
             this.label8.Location = new System.Drawing.Point(800, 78);
@@ -243,10 +244,11 @@
             this.Controls.Add(this.btnAlunos);
             this.Controls.Add(this.btnMeuPerfil);
             this.Controls.Add(this.panel1);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "PaginaInicialFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaginaInicialFuncionario";
+            this.Load += new System.EventHandler(this.PaginaInicialFuncionario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelQtdMensalidadesAtrasadas.ResumeLayout(false);
@@ -262,16 +264,16 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblNomeUsuario;
         private System.Windows.Forms.Button btnSolicitacoes;
         private System.Windows.Forms.Button btnAlunos;
         private System.Windows.Forms.Button btnMeuPerfil;
         private System.Windows.Forms.Panel panelQtdMensalidadesAtrasadas;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTotalAlunosEndividados;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotalMensalidadesAtrasadas;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnCadastrarAluno;
