@@ -4,14 +4,14 @@
 
 ## Sobre o projeto
 
->Neste momento difícil financeiramente falando que estamos passando muitas instituições, e escolas precisaram se adequar ao cenário mas infelizmente mesmo assim muitas famílias não conseguem manter suas mensalidades em dia. Este cenário é uma realidade e precisamos propor soluções para que esta dívida que está sendo gerada seja negociada de forma amigável e viável tanto para quem está devendo quanto para quem está precisando do dinheiro para pagar serviços e funcionários.
+>Neste momento difícil financeiramente falando que estamos passando, muitas instituições e escolas precisaram se adequar ao cenário, mas infelizmente mesmo assim muitas famílias não conseguem manter suas mensalidades em dia. Este cenário é uma realidade e precisamos propor soluções para quem está com dívida, que está sendo gerada seja negociada de forma amigável e viável, tanto para quem está devendo quanto para quem está precisando do dinheiro para pagar serviços e funcionários.
 
   ## Layout
-  ![Screen 1](https://github.com/pedrolf30/gerenciamento-de-mensalidades/tree/main/gerenciamento-de-mensalidades/gerenciamento-de-mensalidades/assets/raw/screen1.png)
+  ![Screen 1](https://github.com/pedrolf30/gerenciamento-de-mensalidades/blob/main/gerenciamento-de-mensalidades/gerenciamento-de-mensalidades/assets/raw/screen1.png)
 
-  ![Screen 2](https://github.com/pedrolf30/gerenciamento-de-mensalidades/tree/main/gerenciamento-de-mensalidades/gerenciamento-de-mensalidades/assets/raw/screen2.png)
+  ![Screen 2](https://github.com/pedrolf30/gerenciamento-de-mensalidades/blob/main/gerenciamento-de-mensalidades/gerenciamento-de-mensalidades/assets/raw/screen2.png)
 
-  ![Screen 3](https://github.com/pedrolf30/gerenciamento-de-mensalidades/tree/main/gerenciamento-de-mensalidades/gerenciamento-de-mensalidades/assets/raw/screen3.png)
+  ![Screen 3](https://github.com/pedrolf30/gerenciamento-de-mensalidades/blob/main/gerenciamento-de-mensalidades/gerenciamento-de-mensalidades/assets/raw/screen3.png)
 
 
   # Tecnologias utilizadas
@@ -32,14 +32,11 @@
   Pré-requisitos: [XAMPP](https://www.apachefriends.org/pt_br/index.html), [Notepad++](https://notepad-plus-plus.org/) (Opcional)
 
   ```bash
-  # clonar repositório
-  git clone https://github.com/pedrolf30/gerenciamento-de-mensalidades.git
-  
   # abra o XAMPP e inicie o Apache e o MySQL
   C:\xampp\xampp-control.exe
   
   # abra o banco de dados do projeto, selecione tudo (CTRL + A) e copie (CTRL + C)
-  notepad database.sql
+  notepad Documentos/database.sql
   
   # após a inicialização do Apache e do MySQL acesse esse endereço abaixo no seu 
   # navegador e cole (CTRL + V) o conteúdo copiado do arquivo database.sql no espaço para 
@@ -57,7 +54,7 @@
   ```bash
   
   # entre no diretório raiz do projeto
-  cd Gerenciamento de Mensalidades\gerenciamento-de-mensalidades\bin\Debug
+  cd gerenciamento-de-mensalidades\gerenciamento-de-mensalidades\bin\Debug
   
   # executar o projeto
   gerenciamento-de-mensalidades.exe
