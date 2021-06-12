@@ -51,13 +51,11 @@
 
   ## Projeto Windows Forms
 
+  Pré-requisitos: [Visual Studio](https://visualstudio.microsoft.com/pt-br/)
+
   ```bash
-  
-  # entre no diretório raiz do projeto
-  cd gerenciamento-de-mensalidades\gerenciamento-de-mensalidades\bin\Debug
-  
-  # executar o projeto
-  gerenciamento-de-mensalidades.exe
+  # entre na solução do projeto pelo Visual Studio e inicie o projeto
+  gerenciamento-de-mensalidades\gerenciamento-de-mensalidades.sln
   ```
 
   ## Faça login utilizando uma das contas de usuário abaixo
