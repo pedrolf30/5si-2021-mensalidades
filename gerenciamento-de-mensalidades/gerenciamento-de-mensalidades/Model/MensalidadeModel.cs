@@ -177,7 +177,7 @@ namespace gerenciamento_de_mensalidades.Model
 
                 if (mysqlDR.Read())
                 {
-                    return Convert.ToDouble(mysqlDR["ValorTotalDividasAluno"]);
+                    return mysqlDR["ValorTotalDividasAluno"] != DBNull.Value ? Convert.ToDouble(mysqlDR["ValorTotalDividasAluno"]) : 0.00;
                 }
                 else
                 {

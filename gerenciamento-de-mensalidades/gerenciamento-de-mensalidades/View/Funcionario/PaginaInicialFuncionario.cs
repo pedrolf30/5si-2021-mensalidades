@@ -48,12 +48,16 @@ namespace gerenciamento_de_mensalidades.View.Funcionario
 
         private void btnSolicitacoes_Click(object sender, EventArgs e)
         {
-
+            Solicitacoes solicitacoes = new Solicitacoes(usuarioFuncionario);
+            this.Hide();
+            solicitacoes.Show();
         }
 
         private void btnAlunos_Click(object sender, EventArgs e)
         {
-
+            ListagemAlunos listagemAlunos = new ListagemAlunos(usuarioFuncionario);
+            this.Hide();
+            listagemAlunos.Show();
         }
 
         private void label8_Click(object sender, EventArgs e)

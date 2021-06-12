@@ -9,6 +9,12 @@ namespace gerenciamento_de_mensalidades.Controller
 {
     class AlunoController
     {
+        public List<AlunoModel> ListarAlunos(String pesquisa, String curso)
+        {
+            AlunoModel aluno = new AlunoModel();
+            return aluno.ListarAlunos(pesquisa, curso);
+        }
+
         public AlunoModel BuscarAlunoPorRA(Int32 ra)
         {
             AlunoModel aluno = new AlunoModel(ra);
@@ -32,6 +38,12 @@ namespace gerenciamento_de_mensalidades.Controller
         {
             AlunoModel aluno = new AlunoModel(idUsuario, nome, ra, dataNascimento, cpf, cursoMatriculado, contato);
             return aluno.AtualizarAluno();
+        }
+
+        public Boolean ExcluirAluno(Int32 ra)
+        {
+            AlunoModel aluno = new AlunoModel(ra);
+            return aluno.ExcluirAluno();
         }
 
         public Boolean VincularUsuarioAluno(Int32 idUsuario, Int32 ra)

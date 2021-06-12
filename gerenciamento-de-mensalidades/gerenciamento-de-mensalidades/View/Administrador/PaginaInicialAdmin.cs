@@ -43,12 +43,16 @@ namespace gerenciamento_de_mensalidades.View.Administrador
 
         private void btnAlunos_Click(object sender, EventArgs e)
         {
-
+            ListagemAlunos listagemAlunos = new ListagemAlunos(usuarioAdministrador);
+            this.Hide();
+            listagemAlunos.Show();
         }
 
         private void btnSolicitacoes_Click(object sender, EventArgs e)
         {
-
+            Solicitacoes solicitacoes = new Solicitacoes(usuarioAdministrador);
+            this.Hide();
+            solicitacoes.Show();
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)

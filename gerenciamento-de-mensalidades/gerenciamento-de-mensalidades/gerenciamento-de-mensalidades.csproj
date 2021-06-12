@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="Connection\DbConnection.cs" />
     <Compile Include="Controller\AlunoController.cs" />
+    <Compile Include="Controller\BolsistaController.cs" />
     <Compile Include="Controller\EnderecoController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\MensalidadeController.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="Enum\TipoUsuario.cs" />
     <Compile Include="Model\AlunoModel.cs" />
+    <Compile Include="Model\BolsistaModel.cs" />
     <Compile Include="Model\EnderecoModel.cs" />
     <Compile Include="Model\FuncionarioModel.cs" />
     <Compile Include="Model\MensalidadeModel.cs" />

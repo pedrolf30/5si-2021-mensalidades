@@ -9,6 +9,13 @@ namespace gerenciamento_de_mensalidades.Controller
 {
     class SolicitacaoController
     {
+        public List<SolicitacaoModel> ListarSolicitacoes(String pesquisa, String status, Boolean minhasSolicitacoes, Int32 idFuncionario = 0)
+        {
+            SolicitacaoModel solicitacao = new SolicitacaoModel();
+            solicitacao.Funcionario.IdFuncionario = idFuncionario;
+            return solicitacao.ListarSolicitacoes(pesquisa, status, minhasSolicitacoes);
+        }
+
         public List<SolicitacaoModel> ListarSolicitacoesAluno(String status, Int32 idAluno)
         {
             SolicitacaoModel solicitacao = new SolicitacaoModel();
@@ -20,6 +27,18 @@ namespace gerenciamento_de_mensalidades.Controller
         {
             SolicitacaoModel solicitacao = new SolicitacaoModel(idAluno, categoria, descricao, dataSolicitacao, status);
             return solicitacao.EnviarSolicitacao();
+        }
+
+        public Boolean ResponderSolicitacao(String status, String resposta, FuncionarioModel atendente, Int32 idSolicitacao)
+        {
+            SolicitacaoModel solicitacao = new SolicitacaoModel(idSolicitacao, atendente, status, resposta);
+            return solicitacao.ResponderSolicitacao();
+        }
+
+        public Boolean ExcluirSolicitacao(Int32 idSolicitacao)
+        {
+            SolicitacaoModel solicitacao = new SolicitacaoModel(idSolicitacao);
+            return solicitacao.ExcluirSolicitacao();
         }
     }
 }

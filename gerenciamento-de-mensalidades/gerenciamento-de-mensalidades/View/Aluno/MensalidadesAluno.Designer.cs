@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.dgvMensalidadesAluno = new System.Windows.Forms.DataGridView();
-            this.cbStatusPagamento = new System.Windows.Forms.ComboBox();
-            this.cbStatusData = new System.Windows.Forms.ComboBox();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mês = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataVencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbStatusPagamento = new System.Windows.Forms.ComboBox();
+            this.cbStatusData = new System.Windows.Forms.ComboBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMensalidadesAluno)).BeginInit();
             this.SuspendLayout();
@@ -100,9 +100,52 @@
             this.dgvMensalidadesAluno.Size = new System.Drawing.Size(562, 318);
             this.dgvMensalidadesAluno.TabIndex = 46;
             // 
+            // Valor
+            // 
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Valor.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
+            this.Valor.Width = 110;
+            // 
+            // Mês
+            // 
+            this.Mês.HeaderText = "Mês";
+            this.Mês.Name = "Mês";
+            this.Mês.ReadOnly = true;
+            this.Mês.Width = 115;
+            // 
+            // DataVencimento
+            // 
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.DataVencimento.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DataVencimento.HeaderText = "Data Vencimento";
+            this.DataVencimento.Name = "DataVencimento";
+            this.DataVencimento.ReadOnly = true;
+            // 
+            // Pago
+            // 
+            this.Pago.HeaderText = "Pago";
+            this.Pago.Name = "Pago";
+            this.Pago.ReadOnly = true;
+            this.Pago.Width = 75;
+            // 
+            // DataPagamento
+            // 
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = "*Não Pago*";
+            this.DataPagamento.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataPagamento.HeaderText = "Data Pagamento";
+            this.DataPagamento.Name = "DataPagamento";
+            this.DataPagamento.ReadOnly = true;
+            // 
             // cbStatusPagamento
             // 
             this.cbStatusPagamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbStatusPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatusPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbStatusPagamento.ForeColor = System.Drawing.SystemColors.Control;
             this.cbStatusPagamento.FormattingEnabled = true;
@@ -145,48 +188,6 @@
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // Valor
-            // 
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Valor.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            this.Valor.ReadOnly = true;
-            this.Valor.Width = 110;
-            // 
-            // Mês
-            // 
-            this.Mês.HeaderText = "Mês";
-            this.Mês.Name = "Mês";
-            this.Mês.ReadOnly = true;
-            this.Mês.Width = 115;
-            // 
-            // DataVencimento
-            // 
-            dataGridViewCellStyle5.Format = "d";
-            dataGridViewCellStyle5.NullValue = null;
-            this.DataVencimento.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DataVencimento.HeaderText = "Data Vencimento";
-            this.DataVencimento.Name = "DataVencimento";
-            this.DataVencimento.ReadOnly = true;
-            // 
-            // Pago
-            // 
-            this.Pago.HeaderText = "Pago";
-            this.Pago.Name = "Pago";
-            this.Pago.ReadOnly = true;
-            this.Pago.Width = 75;
-            // 
-            // DataPagamento
-            // 
-            dataGridViewCellStyle6.Format = "d";
-            dataGridViewCellStyle6.NullValue = "*Não Pago*";
-            this.DataPagamento.DefaultCellStyle = dataGridViewCellStyle6;
-            this.DataPagamento.HeaderText = "Data Pagamento";
-            this.DataPagamento.Name = "DataPagamento";
-            this.DataPagamento.ReadOnly = true;
             // 
             // MensalidadesAluno
             // 

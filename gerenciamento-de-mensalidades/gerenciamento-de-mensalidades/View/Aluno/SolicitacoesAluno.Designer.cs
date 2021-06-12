@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.rtbDescricao = new System.Windows.Forms.RichTextBox();
             this.lblDesc = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEnviar.Location = new System.Drawing.Point(810, 302);
+            this.btnEnviar.Location = new System.Drawing.Point(860, 302);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(92, 26);
             this.btnEnviar.TabIndex = 80;
@@ -86,7 +86,7 @@
             this.rtbDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtbDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbDescricao.ForeColor = System.Drawing.SystemColors.Control;
-            this.rtbDescricao.Location = new System.Drawing.Point(818, 206);
+            this.rtbDescricao.Location = new System.Drawing.Point(868, 206);
             this.rtbDescricao.Name = "rtbDescricao";
             this.rtbDescricao.ReadOnly = true;
             this.rtbDescricao.Size = new System.Drawing.Size(247, 73);
@@ -99,7 +99,7 @@
             this.lblDesc.AutoSize = true;
             this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDesc.Location = new System.Drawing.Point(685, 206);
+            this.lblDesc.Location = new System.Drawing.Point(735, 206);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(83, 16);
             this.lblDesc.TabIndex = 71;
@@ -115,7 +115,7 @@
             this.cbCategoria.Items.AddRange(new object[] {
             "Solicitação de Bolsa",
             "Solicitação de Plano de Pagamento Extendido"});
-            this.cbCategoria.Location = new System.Drawing.Point(818, 173);
+            this.cbCategoria.Location = new System.Drawing.Point(868, 173);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(247, 21);
             this.cbCategoria.TabIndex = 69;
@@ -126,7 +126,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCategoria.Location = new System.Drawing.Point(685, 174);
+            this.lblCategoria.Location = new System.Drawing.Point(735, 174);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(80, 16);
             this.lblCategoria.TabIndex = 68;
@@ -152,13 +152,14 @@
             this.dgvSolicitacoes.Location = new System.Drawing.Point(12, 136);
             this.dgvSolicitacoes.Name = "dgvSolicitacoes";
             this.dgvSolicitacoes.ReadOnly = true;
-            this.dgvSolicitacoes.Size = new System.Drawing.Size(657, 334);
+            this.dgvSolicitacoes.Size = new System.Drawing.Size(707, 334);
             this.dgvSolicitacoes.TabIndex = 67;
             this.dgvSolicitacoes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSolicitacoes_CellClick);
             // 
             // cbStatus
             // 
             this.cbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbStatus.ForeColor = System.Drawing.SystemColors.Control;
             this.cbStatus.FormattingEnabled = true;
@@ -167,7 +168,7 @@
             "Pendentes",
             "Aprovadas",
             "Rejeitadas"});
-            this.cbStatus.Location = new System.Drawing.Point(510, 101);
+            this.cbStatus.Location = new System.Drawing.Point(551, 102);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(145, 21);
             this.cbStatus.TabIndex = 66;
@@ -215,7 +216,7 @@
             this.btnCriarSolicitacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCriarSolicitacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCriarSolicitacao.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCriarSolicitacao.Location = new System.Drawing.Point(756, 97);
+            this.btnCriarSolicitacao.Location = new System.Drawing.Point(868, 97);
             this.btnCriarSolicitacao.Name = "btnCriarSolicitacao";
             this.btnCriarSolicitacao.Size = new System.Drawing.Size(146, 26);
             this.btnCriarSolicitacao.TabIndex = 79;
@@ -231,7 +232,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1077, 60);
+            this.panel1.Size = new System.Drawing.Size(1127, 60);
             this.panel1.TabIndex = 63;
             // 
             // txbCategoria
@@ -239,7 +240,7 @@
             this.txbCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCategoria.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbCategoria.Location = new System.Drawing.Point(818, 173);
+            this.txbCategoria.Location = new System.Drawing.Point(868, 173);
             this.txbCategoria.Name = "txbCategoria";
             this.txbCategoria.ReadOnly = true;
             this.txbCategoria.Size = new System.Drawing.Size(247, 21);
@@ -251,7 +252,7 @@
             this.txbDataSolicitacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txbDataSolicitacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbDataSolicitacao.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbDataSolicitacao.Location = new System.Drawing.Point(818, 295);
+            this.txbDataSolicitacao.Location = new System.Drawing.Point(868, 295);
             this.txbDataSolicitacao.Name = "txbDataSolicitacao";
             this.txbDataSolicitacao.ReadOnly = true;
             this.txbDataSolicitacao.Size = new System.Drawing.Size(247, 21);
@@ -263,7 +264,7 @@
             this.lblDataSolicitacao.AutoSize = true;
             this.lblDataSolicitacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataSolicitacao.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDataSolicitacao.Location = new System.Drawing.Point(685, 296);
+            this.lblDataSolicitacao.Location = new System.Drawing.Point(735, 296);
             this.lblDataSolicitacao.Name = "lblDataSolicitacao";
             this.lblDataSolicitacao.Size = new System.Drawing.Size(127, 16);
             this.lblDataSolicitacao.TabIndex = 82;
@@ -275,7 +276,7 @@
             this.txbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbStatus.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbStatus.Location = new System.Drawing.Point(818, 334);
+            this.txbStatus.Location = new System.Drawing.Point(868, 334);
             this.txbStatus.Name = "txbStatus";
             this.txbStatus.ReadOnly = true;
             this.txbStatus.Size = new System.Drawing.Size(247, 21);
@@ -287,7 +288,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblStatus.Location = new System.Drawing.Point(685, 335);
+            this.lblStatus.Location = new System.Drawing.Point(735, 335);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(55, 16);
             this.lblStatus.TabIndex = 84;
@@ -299,7 +300,7 @@
             this.txbAtendidoPor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txbAtendidoPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbAtendidoPor.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbAtendidoPor.Location = new System.Drawing.Point(818, 372);
+            this.txbAtendidoPor.Location = new System.Drawing.Point(868, 372);
             this.txbAtendidoPor.Name = "txbAtendidoPor";
             this.txbAtendidoPor.ReadOnly = true;
             this.txbAtendidoPor.Size = new System.Drawing.Size(247, 21);
@@ -311,7 +312,7 @@
             this.lblAtendidoPor.AutoSize = true;
             this.lblAtendidoPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAtendidoPor.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblAtendidoPor.Location = new System.Drawing.Point(685, 373);
+            this.lblAtendidoPor.Location = new System.Drawing.Point(735, 373);
             this.lblAtendidoPor.Name = "lblAtendidoPor";
             this.lblAtendidoPor.Size = new System.Drawing.Size(102, 16);
             this.lblAtendidoPor.TabIndex = 86;
@@ -324,7 +325,7 @@
             this.rtbResposta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtbResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbResposta.ForeColor = System.Drawing.SystemColors.Control;
-            this.rtbResposta.Location = new System.Drawing.Point(818, 409);
+            this.rtbResposta.Location = new System.Drawing.Point(868, 409);
             this.rtbResposta.Name = "rtbResposta";
             this.rtbResposta.ReadOnly = true;
             this.rtbResposta.Size = new System.Drawing.Size(247, 61);
@@ -337,7 +338,7 @@
             this.lblResposta.AutoSize = true;
             this.lblResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResposta.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblResposta.Location = new System.Drawing.Point(685, 409);
+            this.lblResposta.Location = new System.Drawing.Point(735, 409);
             this.lblResposta.Name = "lblResposta";
             this.lblResposta.Size = new System.Drawing.Size(79, 16);
             this.lblResposta.TabIndex = 88;
@@ -346,16 +347,16 @@
             // 
             // Categoria
             // 
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Categoria.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Categoria.DefaultCellStyle = dataGridViewCellStyle7;
             this.Categoria.HeaderText = "Categoria";
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
             // 
             // Descrição
             // 
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Descrição.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Descrição.DefaultCellStyle = dataGridViewCellStyle8;
             this.Descrição.HeaderText = "Descrição";
             this.Descrição.Name = "Descrição";
             this.Descrição.ReadOnly = true;
@@ -363,18 +364,18 @@
             // 
             // DataSolicitação
             // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.DataSolicitação.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Format = "d";
+            dataGridViewCellStyle9.NullValue = null;
+            this.DataSolicitação.DefaultCellStyle = dataGridViewCellStyle9;
             this.DataSolicitação.HeaderText = "Data Solicitação";
             this.DataSolicitação.Name = "DataSolicitação";
             this.DataSolicitação.ReadOnly = true;
-            this.DataSolicitação.Width = 80;
+            this.DataSolicitação.Width = 125;
             // 
             // Status
             // 
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Status.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Status.DefaultCellStyle = dataGridViewCellStyle10;
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
@@ -382,18 +383,18 @@
             // 
             // AtendidoPor
             // 
-            dataGridViewCellStyle5.NullValue = "*Não Atendido*";
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AtendidoPor.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.NullValue = "*Não Atendido*";
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AtendidoPor.DefaultCellStyle = dataGridViewCellStyle11;
             this.AtendidoPor.HeaderText = "Atendido Por";
             this.AtendidoPor.Name = "AtendidoPor";
             this.AtendidoPor.ReadOnly = true;
             // 
             // Resposta
             // 
-            dataGridViewCellStyle6.NullValue = "*Sem Resposta*";
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Resposta.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.NullValue = "*Sem Resposta*";
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Resposta.DefaultCellStyle = dataGridViewCellStyle12;
             this.Resposta.HeaderText = "Resposta";
             this.Resposta.Name = "Resposta";
             this.Resposta.ReadOnly = true;
@@ -404,7 +405,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1077, 496);
+            this.ClientSize = new System.Drawing.Size(1127, 496);
             this.Controls.Add(this.rtbResposta);
             this.Controls.Add(this.lblResposta);
             this.Controls.Add(this.txbAtendidoPor);

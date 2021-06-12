@@ -213,8 +213,8 @@ namespace gerenciamento_de_mensalidades.View.Administrador
                 txbIdUsuarioFuncionario.Text = row.Cells[0].Value.ToString();
                 txbNomeFuncionario.Text = funcionario.Nome;
                 txbCPFFuncionario.Text = funcionario.CPF;
-                txbNascFuncionario.Text = funcionario.DataNascimento.Value.ToString("dd/MM/yyyy");
-                dtpNascimentoFuncionario.Value = funcionario.DataNascimento.Value;
+                txbNascFuncionario.Text = funcionario.DataNascimento.ToString("dd/MM/yyyy");
+                dtpNascimentoFuncionario.Value = funcionario.DataNascimento;
                 txbContatoFuncionario.Text = funcionario.Contato;
                 txbEmailFuncionario.Text = row.Cells[1].Value.ToString();
                 txbAtivoFuncionario.Text = row.Cells[3].Value.ToString();

@@ -102,8 +102,8 @@ namespace gerenciamento_de_mensalidades.View.Funcionario
             lblNomeUsuario.Text = usuarioFuncionario.Nome;
             txbNome.Text = usuarioFuncionario.Nome;
             txbCPF.Text = usuarioFuncionario.CPF;
-            txbNascimento.Text = usuarioFuncionario.DataNascimento.Value.ToString("dd/MM/yyyy");
-            dtpNascimento.Value = usuarioFuncionario.DataNascimento.Value;
+            txbNascimento.Text = usuarioFuncionario.DataNascimento.ToString("dd/MM/yyyy");
+            dtpNascimento.Value = usuarioFuncionario.DataNascimento;
             txbContato.Text = usuarioFuncionario.Contato;
             txbEmail.Text = usuarioFuncionario.Email;
         }

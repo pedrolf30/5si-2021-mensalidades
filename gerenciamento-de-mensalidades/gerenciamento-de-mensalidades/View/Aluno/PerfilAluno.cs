@@ -335,7 +335,7 @@ namespace gerenciamento_de_mensalidades.View.Aluno
             }
             else if (panel == "Meus Endereços")
             {
-                if (txbRua.Text != "" && txbNumero.Text != "" && txbCEP.Text != "" && txbBairro.Text != "" && txbCidade.Text != "" && cbEstado.SelectedIndex != 0 && txbComplemento.Text != "")
+                if (txbRua.Text != "" && txbNumero.Text != "" && txbCEP.Text != "" && txbBairro.Text != "" && txbCidade.Text != "" && cbEstado.SelectedIndex != 0)
                 {
                     return true;
                 }

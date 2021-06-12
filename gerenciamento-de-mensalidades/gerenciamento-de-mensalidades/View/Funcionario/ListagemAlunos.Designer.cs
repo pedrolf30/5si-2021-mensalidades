@@ -28,36 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblNomeUsuario = new System.Windows.Forms.Label();
+            this.dgvAlunos = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cbCurso = new System.Windows.Forms.ComboBox();
+            this.Bolsista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numMensalidadesAtrasadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorTotalDivida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idAluno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descontoBolsa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.txbPesquisa = new System.Windows.Forms.TextBox();
             this.panelDados = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnExcluirAluno = new System.Windows.Forms.Button();
+            this.btnAtualizarBolsa = new System.Windows.Forms.Button();
+            this.lblDesconto = new System.Windows.Forms.Label();
+            this.cbDesconto = new System.Windows.Forms.ComboBox();
+            this.txbIDUsuario = new System.Windows.Forms.TextBox();
+            this.txbIDAluno = new System.Windows.Forms.TextBox();
+            this.cbStatusPagamento = new System.Windows.Forms.ComboBox();
+            this.cbStatusData = new System.Windows.Forms.ComboBox();
+            this.dgvMensalidades = new System.Windows.Forms.DataGridView();
             this.Mês = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataVencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBolsista = new System.Windows.Forms.Button();
-            this.btnDesativar = new System.Windows.Forms.Button();
+            this.btnRemoverBolsa = new System.Windows.Forms.Button();
             this.txbCurso = new System.Windows.Forms.TextBox();
             this.lblCurso = new System.Windows.Forms.Label();
             this.txbNascimento = new System.Windows.Forms.TextBox();
-            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblNascimento = new System.Windows.Forms.Label();
             this.txbCPF = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
@@ -69,21 +87,22 @@
             this.txbContato = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblContato = new System.Windows.Forms.Label();
+            this.cbCurso = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             this.panelDados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMensalidades)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblNomeUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1053, 60);
+            this.panel1.Size = new System.Drawing.Size(1187, 60);
             this.panel1.TabIndex = 81;
             // 
             // label7
@@ -97,42 +116,55 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Alunos";
             // 
-            // label6
+            // lblNomeUsuario
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(767, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 16);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Nome usuário conectado";
+            this.lblNomeUsuario.AutoSize = true;
+            this.lblNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNomeUsuario.Location = new System.Drawing.Point(909, 21);
+            this.lblNomeUsuario.Name = "lblNomeUsuario";
+            this.lblNomeUsuario.Size = new System.Drawing.Size(181, 16);
+            this.lblNomeUsuario.TabIndex = 3;
+            this.lblNomeUsuario.Text = "Nome usuário conectado";
             // 
-            // dataGridView1
+            // dgvAlunos
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAlunos.AllowUserToAddRows = false;
+            this.dgvAlunos.AllowUserToDeleteRows = false;
+            this.dgvAlunos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAlunos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.dgvAlunos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlunos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
             this.RA,
             this.Nascimento,
             this.CPF,
             this.Curso,
             this.Contato,
-            this.Email});
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.dataGridView1.Location = new System.Drawing.Point(12, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 318);
-            this.dataGridView1.TabIndex = 85;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.Bolsista,
+            this.email,
+            this.numMensalidadesAtrasadas,
+            this.valorTotalDivida,
+            this.idAluno,
+            this.idUsuario,
+            this.descontoBolsa});
+            this.dgvAlunos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.dgvAlunos.Location = new System.Drawing.Point(12, 120);
+            this.dgvAlunos.Name = "dgvAlunos";
+            this.dgvAlunos.ReadOnly = true;
+            this.dgvAlunos.Size = new System.Drawing.Size(1163, 318);
+            this.dgvAlunos.TabIndex = 85;
+            this.dgvAlunos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlunos_CellClick);
             // 
             // Nome
             // 
+            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Nome.DefaultCellStyle = dataGridViewCellStyle55;
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
-            this.Nome.Width = 300;
+            this.Nome.Width = 200;
             // 
             // RA
             // 
@@ -143,20 +175,25 @@
             // 
             // Nascimento
             // 
+            dataGridViewCellStyle56.Format = "d";
+            dataGridViewCellStyle56.NullValue = null;
+            this.Nascimento.DefaultCellStyle = dataGridViewCellStyle56;
             this.Nascimento.HeaderText = "Nascimento";
             this.Nascimento.Name = "Nascimento";
             this.Nascimento.ReadOnly = true;
-            this.Nascimento.Width = 150;
+            this.Nascimento.Width = 90;
             // 
             // CPF
             // 
             this.CPF.HeaderText = "CPF";
             this.CPF.Name = "CPF";
             this.CPF.ReadOnly = true;
-            this.CPF.Width = 75;
+            this.CPF.Width = 90;
             // 
             // Curso
             // 
+            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Curso.DefaultCellStyle = dataGridViewCellStyle57;
             this.Curso.HeaderText = "Curso";
             this.Curso.Name = "Curso";
             this.Curso.ReadOnly = true;
@@ -164,38 +201,64 @@
             // 
             // Contato
             // 
+            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Contato.DefaultCellStyle = dataGridViewCellStyle58;
             this.Contato.HeaderText = "Contato";
             this.Contato.Name = "Contato";
             this.Contato.ReadOnly = true;
             // 
-            // Email
+            // Bolsista
             // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 150;
+            this.Bolsista.HeaderText = "Bolsista";
+            this.Bolsista.Name = "Bolsista";
+            this.Bolsista.ReadOnly = true;
+            this.Bolsista.Width = 55;
             // 
-            // comboBox1
+            // email
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(895, 85);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 21);
-            this.comboBox1.TabIndex = 84;
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 150;
             // 
-            // cbCurso
+            // numMensalidadesAtrasadas
             // 
-            this.cbCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.cbCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCurso.ForeColor = System.Drawing.SystemColors.Control;
-            this.cbCurso.FormattingEnabled = true;
-            this.cbCurso.Location = new System.Drawing.Point(736, 86);
-            this.cbCurso.Name = "cbCurso";
-            this.cbCurso.Size = new System.Drawing.Size(142, 21);
-            this.cbCurso.TabIndex = 83;
+            dataGridViewCellStyle59.NullValue = null;
+            this.numMensalidadesAtrasadas.DefaultCellStyle = dataGridViewCellStyle59;
+            this.numMensalidadesAtrasadas.HeaderText = "Nº Mensalidades Atrasadas";
+            this.numMensalidadesAtrasadas.Name = "numMensalidadesAtrasadas";
+            this.numMensalidadesAtrasadas.ReadOnly = true;
+            this.numMensalidadesAtrasadas.Width = 110;
+            // 
+            // valorTotalDivida
+            // 
+            dataGridViewCellStyle60.Format = "C2";
+            dataGridViewCellStyle60.NullValue = null;
+            this.valorTotalDivida.DefaultCellStyle = dataGridViewCellStyle60;
+            this.valorTotalDivida.HeaderText = "Valor Total Dívida";
+            this.valorTotalDivida.Name = "valorTotalDivida";
+            this.valorTotalDivida.ReadOnly = true;
+            // 
+            // idAluno
+            // 
+            this.idAluno.HeaderText = "ID Aluno";
+            this.idAluno.Name = "idAluno";
+            this.idAluno.ReadOnly = true;
+            this.idAluno.Visible = false;
+            // 
+            // idUsuario
+            // 
+            this.idUsuario.HeaderText = "ID Usuario";
+            this.idUsuario.Name = "idUsuario";
+            this.idUsuario.ReadOnly = true;
+            this.idUsuario.Visible = false;
+            // 
+            // descontoBolsa
+            // 
+            this.descontoBolsa.HeaderText = "Desconto Bolsa";
+            this.descontoBolsa.Name = "descontoBolsa";
+            this.descontoBolsa.ReadOnly = true;
+            this.descontoBolsa.Visible = false;
             // 
             // btnVoltar
             // 
@@ -218,21 +281,26 @@
             this.txbPesquisa.ForeColor = System.Drawing.SystemColors.Control;
             this.txbPesquisa.Location = new System.Drawing.Point(329, 86);
             this.txbPesquisa.Name = "txbPesquisa";
-            this.txbPesquisa.ReadOnly = true;
             this.txbPesquisa.Size = new System.Drawing.Size(352, 21);
             this.txbPesquisa.TabIndex = 118;
+            this.txbPesquisa.TextChanged += new System.EventHandler(this.txbPesquisa_TextChanged);
             // 
             // panelDados
             // 
-            this.panelDados.Controls.Add(this.comboBox3);
-            this.panelDados.Controls.Add(this.comboBox2);
-            this.panelDados.Controls.Add(this.dataGridView2);
+            this.panelDados.Controls.Add(this.btnExcluirAluno);
+            this.panelDados.Controls.Add(this.btnAtualizarBolsa);
+            this.panelDados.Controls.Add(this.lblDesconto);
+            this.panelDados.Controls.Add(this.cbDesconto);
+            this.panelDados.Controls.Add(this.txbIDUsuario);
+            this.panelDados.Controls.Add(this.txbIDAluno);
+            this.panelDados.Controls.Add(this.cbStatusPagamento);
+            this.panelDados.Controls.Add(this.cbStatusData);
+            this.panelDados.Controls.Add(this.dgvMensalidades);
             this.panelDados.Controls.Add(this.btnBolsista);
-            this.panelDados.Controls.Add(this.btnDesativar);
+            this.panelDados.Controls.Add(this.btnRemoverBolsa);
             this.panelDados.Controls.Add(this.txbCurso);
             this.panelDados.Controls.Add(this.lblCurso);
             this.panelDados.Controls.Add(this.txbNascimento);
-            this.panelDados.Controls.Add(this.dtpNascimento);
             this.panelDados.Controls.Add(this.lblNascimento);
             this.panelDados.Controls.Add(this.txbCPF);
             this.panelDados.Controls.Add(this.lblCPF);
@@ -244,47 +312,149 @@
             this.panelDados.Controls.Add(this.txbContato);
             this.panelDados.Controls.Add(this.lblEmail);
             this.panelDados.Controls.Add(this.lblContato);
-            this.panelDados.Location = new System.Drawing.Point(12, 444);
+            this.panelDados.Location = new System.Drawing.Point(13, 444);
             this.panelDados.Name = "panelDados";
-            this.panelDados.Size = new System.Drawing.Size(1028, 192);
+            this.panelDados.Size = new System.Drawing.Size(1162, 194);
             this.panelDados.TabIndex = 119;
             this.panelDados.Visible = false;
             // 
-            // comboBox3
+            // btnExcluirAluno
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(724, 13);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(142, 21);
-            this.comboBox3.TabIndex = 139;
+            this.btnExcluirAluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluirAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirAluno.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnExcluirAluno.Location = new System.Drawing.Point(361, 137);
+            this.btnExcluirAluno.Name = "btnExcluirAluno";
+            this.btnExcluirAluno.Size = new System.Drawing.Size(200, 26);
+            this.btnExcluirAluno.TabIndex = 144;
+            this.btnExcluirAluno.Text = "Excluir aluno";
+            this.btnExcluirAluno.UseVisualStyleBackColor = true;
+            this.btnExcluirAluno.Visible = false;
+            this.btnExcluirAluno.Click += new System.EventHandler(this.btnExcluirAluno_Click);
             // 
-            // comboBox2
+            // btnAtualizarBolsa
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(883, 13);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(142, 21);
-            this.comboBox2.TabIndex = 121;
+            this.btnAtualizarBolsa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizarBolsa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizarBolsa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarBolsa.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAtualizarBolsa.Location = new System.Drawing.Point(361, 73);
+            this.btnAtualizarBolsa.Name = "btnAtualizarBolsa";
+            this.btnAtualizarBolsa.Size = new System.Drawing.Size(200, 26);
+            this.btnAtualizarBolsa.TabIndex = 138;
+            this.btnAtualizarBolsa.Text = "Atualizar bolsa";
+            this.btnAtualizarBolsa.UseVisualStyleBackColor = true;
+            this.btnAtualizarBolsa.Visible = false;
+            this.btnAtualizarBolsa.Click += new System.EventHandler(this.btnAtualizarBolsa_Click);
             // 
-            // dataGridView2
+            // lblDesconto
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lblDesconto.AutoSize = true;
+            this.lblDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesconto.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblDesconto.Location = new System.Drawing.Point(358, 45);
+            this.lblDesconto.Name = "lblDesconto";
+            this.lblDesconto.Size = new System.Drawing.Size(78, 16);
+            this.lblDesconto.TabIndex = 143;
+            this.lblDesconto.Text = "Desconto:";
+            // 
+            // cbDesconto
+            // 
+            this.cbDesconto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbDesconto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDesconto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbDesconto.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbDesconto.FormattingEnabled = true;
+            this.cbDesconto.Items.AddRange(new object[] {
+            "10%",
+            "25%",
+            "35%",
+            "50%",
+            "60%",
+            "75%",
+            "85%",
+            "100%"});
+            this.cbDesconto.Location = new System.Drawing.Point(442, 42);
+            this.cbDesconto.Name = "cbDesconto";
+            this.cbDesconto.Size = new System.Drawing.Size(119, 21);
+            this.cbDesconto.TabIndex = 121;
+            // 
+            // txbIDUsuario
+            // 
+            this.txbIDUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbIDUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIDUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.txbIDUsuario.Location = new System.Drawing.Point(40, 40);
+            this.txbIDUsuario.Name = "txbIDUsuario";
+            this.txbIDUsuario.ReadOnly = true;
+            this.txbIDUsuario.Size = new System.Drawing.Size(71, 21);
+            this.txbIDUsuario.TabIndex = 142;
+            this.txbIDUsuario.Visible = false;
+            // 
+            // txbIDAluno
+            // 
+            this.txbIDAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbIDAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIDAluno.ForeColor = System.Drawing.SystemColors.Control;
+            this.txbIDAluno.Location = new System.Drawing.Point(40, 40);
+            this.txbIDAluno.Name = "txbIDAluno";
+            this.txbIDAluno.ReadOnly = true;
+            this.txbIDAluno.Size = new System.Drawing.Size(71, 21);
+            this.txbIDAluno.TabIndex = 141;
+            this.txbIDAluno.Visible = false;
+            // 
+            // cbStatusPagamento
+            // 
+            this.cbStatusPagamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbStatusPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatusPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbStatusPagamento.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbStatusPagamento.FormattingEnabled = true;
+            this.cbStatusPagamento.Items.AddRange(new object[] {
+            "Todas",
+            "Pagas",
+            "Não Pagas"});
+            this.cbStatusPagamento.Location = new System.Drawing.Point(993, 5);
+            this.cbStatusPagamento.Name = "cbStatusPagamento";
+            this.cbStatusPagamento.Size = new System.Drawing.Size(145, 21);
+            this.cbStatusPagamento.TabIndex = 140;
+            this.cbStatusPagamento.SelectedIndexChanged += new System.EventHandler(this.cbStatusPagamento_SelectedIndexChanged);
+            // 
+            // cbStatusData
+            // 
+            this.cbStatusData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbStatusData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatusData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbStatusData.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbStatusData.FormattingEnabled = true;
+            this.cbStatusData.Items.AddRange(new object[] {
+            "Mais recentes",
+            "Mais antigas"});
+            this.cbStatusData.Location = new System.Drawing.Point(834, 6);
+            this.cbStatusData.Name = "cbStatusData";
+            this.cbStatusData.Size = new System.Drawing.Size(142, 21);
+            this.cbStatusData.TabIndex = 139;
+            this.cbStatusData.SelectedIndexChanged += new System.EventHandler(this.cbStatusData_SelectedIndexChanged);
+            // 
+            // dgvMensalidades
+            // 
+            this.dgvMensalidades.AllowUserToAddRows = false;
+            this.dgvMensalidades.AllowUserToDeleteRows = false;
+            this.dgvMensalidades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.dgvMensalidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMensalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMensalidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Mês,
             this.Valor,
             this.DataVencimento,
             this.Pago,
             this.DataPagamento});
-            this.dataGridView2.Location = new System.Drawing.Point(594, 39);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(431, 150);
-            this.dataGridView2.TabIndex = 138;
+            this.dgvMensalidades.Location = new System.Drawing.Point(649, 34);
+            this.dgvMensalidades.Name = "dgvMensalidades";
+            this.dgvMensalidades.ReadOnly = true;
+            this.dgvMensalidades.Size = new System.Drawing.Size(510, 150);
+            this.dgvMensalidades.TabIndex = 138;
             // 
             // Mês
             // 
@@ -294,13 +464,18 @@
             // 
             // Valor
             // 
+            dataGridViewCellStyle61.Format = "C2";
+            dataGridViewCellStyle61.NullValue = null;
+            this.Valor.DefaultCellStyle = dataGridViewCellStyle61;
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
             this.Valor.ReadOnly = true;
-            this.Valor.Width = 75;
             // 
             // DataVencimento
             // 
+            dataGridViewCellStyle62.Format = "d";
+            dataGridViewCellStyle62.NullValue = null;
+            this.DataVencimento.DefaultCellStyle = dataGridViewCellStyle62;
             this.DataVencimento.HeaderText = "Data Vencimento";
             this.DataVencimento.Name = "DataVencimento";
             this.DataVencimento.ReadOnly = true;
@@ -314,6 +489,9 @@
             // 
             // DataPagamento
             // 
+            dataGridViewCellStyle63.Format = "d";
+            dataGridViewCellStyle63.NullValue = "** Não Pago **";
+            this.DataPagamento.DefaultCellStyle = dataGridViewCellStyle63;
             this.DataPagamento.HeaderText = "Data Pagamento";
             this.DataPagamento.Name = "DataPagamento";
             this.DataPagamento.ReadOnly = true;
@@ -330,27 +508,27 @@
             this.btnBolsista.TabIndex = 137;
             this.btnBolsista.Text = "Definir aluno como bolsista";
             this.btnBolsista.UseVisualStyleBackColor = true;
+            this.btnBolsista.Visible = false;
             this.btnBolsista.Click += new System.EventHandler(this.btnBolsista_Click);
             // 
-            // btnDesativar
+            // btnRemoverBolsa
             // 
-            this.btnDesativar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDesativar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesativar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesativar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDesativar.Location = new System.Drawing.Point(361, 110);
-            this.btnDesativar.Name = "btnDesativar";
-            this.btnDesativar.Size = new System.Drawing.Size(200, 26);
-            this.btnDesativar.TabIndex = 136;
-            this.btnDesativar.Text = "Desativar Aluno";
-            this.btnDesativar.UseVisualStyleBackColor = true;
-            this.btnDesativar.Visible = false;
-            this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
+            this.btnRemoverBolsa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoverBolsa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverBolsa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoverBolsa.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRemoverBolsa.Location = new System.Drawing.Point(361, 105);
+            this.btnRemoverBolsa.Name = "btnRemoverBolsa";
+            this.btnRemoverBolsa.Size = new System.Drawing.Size(200, 26);
+            this.btnRemoverBolsa.TabIndex = 136;
+            this.btnRemoverBolsa.Text = "Remover bolsa";
+            this.btnRemoverBolsa.UseVisualStyleBackColor = true;
+            this.btnRemoverBolsa.Visible = false;
+            this.btnRemoverBolsa.Click += new System.EventHandler(this.btnRemoverBolsa_Click);
             // 
             // txbCurso
             // 
             this.txbCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbCurso.Enabled = false;
             this.txbCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCurso.ForeColor = System.Drawing.SystemColors.Control;
             this.txbCurso.Location = new System.Drawing.Point(60, 162);
@@ -373,22 +551,13 @@
             // txbNascimento
             // 
             this.txbNascimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbNascimento.Enabled = false;
             this.txbNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNascimento.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbNascimento.Location = new System.Drawing.Point(103, 72);
+            this.txbNascimento.Location = new System.Drawing.Point(101, 72);
             this.txbNascimento.Name = "txbNascimento";
             this.txbNascimento.ReadOnly = true;
             this.txbNascimento.Size = new System.Drawing.Size(228, 21);
             this.txbNascimento.TabIndex = 133;
-            // 
-            // dtpNascimento
-            // 
-            this.dtpNascimento.Location = new System.Drawing.Point(103, 73);
-            this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(228, 20);
-            this.dtpNascimento.TabIndex = 132;
-            this.dtpNascimento.Visible = false;
             // 
             // lblNascimento
             // 
@@ -404,10 +573,9 @@
             // txbCPF
             // 
             this.txbCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbCPF.Enabled = false;
             this.txbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCPF.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbCPF.Location = new System.Drawing.Point(163, 40);
+            this.txbCPF.Location = new System.Drawing.Point(161, 40);
             this.txbCPF.Name = "txbCPF";
             this.txbCPF.ReadOnly = true;
             this.txbCPF.Size = new System.Drawing.Size(168, 21);
@@ -427,10 +595,9 @@
             // txbRA
             // 
             this.txbRA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbRA.Enabled = false;
             this.txbRA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbRA.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbRA.Location = new System.Drawing.Point(42, 40);
+            this.txbRA.Location = new System.Drawing.Point(40, 40);
             this.txbRA.Name = "txbRA";
             this.txbRA.ReadOnly = true;
             this.txbRA.Size = new System.Drawing.Size(71, 21);
@@ -450,10 +617,9 @@
             // txbNome
             // 
             this.txbNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbNome.Enabled = false;
             this.txbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNome.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbNome.Location = new System.Drawing.Point(62, 11);
+            this.txbNome.Location = new System.Drawing.Point(60, 11);
             this.txbNome.Name = "txbNome";
             this.txbNome.ReadOnly = true;
             this.txbNome.Size = new System.Drawing.Size(269, 21);
@@ -473,10 +639,9 @@
             // txbEmail
             // 
             this.txbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbEmail.Enabled = false;
             this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbEmail.Location = new System.Drawing.Point(60, 128);
+            this.txbEmail.Location = new System.Drawing.Point(58, 128);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.ReadOnly = true;
             this.txbEmail.Size = new System.Drawing.Size(271, 21);
@@ -485,10 +650,9 @@
             // txbContato
             // 
             this.txbContato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txbContato.Enabled = false;
             this.txbContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbContato.ForeColor = System.Drawing.SystemColors.Control;
-            this.txbContato.Location = new System.Drawing.Point(74, 98);
+            this.txbContato.Location = new System.Drawing.Point(72, 98);
             this.txbContato.Name = "txbContato";
             this.txbContato.ReadOnly = true;
             this.txbContato.Size = new System.Drawing.Size(257, 21);
@@ -516,27 +680,47 @@
             this.lblContato.TabIndex = 121;
             this.lblContato.Text = "Contato:";
             // 
+            // cbCurso
+            // 
+            this.cbCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCurso.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbCurso.FormattingEnabled = true;
+            this.cbCurso.Items.AddRange(new object[] {
+            "Todos os Cursos",
+            "Sistemas de Informação",
+            "Direito",
+            "Pedagogia",
+            "Psicologia"});
+            this.cbCurso.Location = new System.Drawing.Point(935, 86);
+            this.cbCurso.Name = "cbCurso";
+            this.cbCurso.Size = new System.Drawing.Size(216, 21);
+            this.cbCurso.TabIndex = 120;
+            this.cbCurso.SelectedIndexChanged += new System.EventHandler(this.cbCurso_SelectedIndexChanged);
+            // 
             // ListagemAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1053, 640);
+            this.ClientSize = new System.Drawing.Size(1187, 648);
+            this.Controls.Add(this.cbCurso);
             this.Controls.Add(this.panelDados);
             this.Controls.Add(this.txbPesquisa);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cbCurso);
+            this.Controls.Add(this.dgvAlunos);
             this.Controls.Add(this.btnVoltar);
             this.Name = "ListagemAlunos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListagemAlunos";
+            this.Load += new System.EventHandler(this.ListagemAlunos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).EndInit();
             this.panelDados.ResumeLayout(false);
             this.panelDados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMensalidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,32 +730,17 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox cbCurso;
+        private System.Windows.Forms.Label lblNomeUsuario;
+        private System.Windows.Forms.DataGridView dgvAlunos;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.TextBox txbPesquisa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nascimento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Curso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.Panel panelDados;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mês;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataVencimento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataPagamento;
+        private System.Windows.Forms.DataGridView dgvMensalidades;
         private System.Windows.Forms.Button btnBolsista;
-        private System.Windows.Forms.Button btnDesativar;
+        private System.Windows.Forms.Button btnRemoverBolsa;
         private System.Windows.Forms.TextBox txbCurso;
         private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.TextBox txbNascimento;
-        private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.Label lblNascimento;
         private System.Windows.Forms.TextBox txbCPF;
         private System.Windows.Forms.Label lblCPF;
@@ -583,7 +752,32 @@
         private System.Windows.Forms.TextBox txbContato;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblContato;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mês;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataVencimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataPagamento;
+        private System.Windows.Forms.ComboBox cbStatusPagamento;
+        private System.Windows.Forms.ComboBox cbStatusData;
+        private System.Windows.Forms.TextBox txbIDUsuario;
+        private System.Windows.Forms.TextBox txbIDAluno;
+        private System.Windows.Forms.ComboBox cbCurso;
+        private System.Windows.Forms.Label lblDesconto;
+        private System.Windows.Forms.ComboBox cbDesconto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nascimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Curso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bolsista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numMensalidadesAtrasadas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorTotalDivida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAluno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descontoBolsa;
+        private System.Windows.Forms.Button btnAtualizarBolsa;
+        private System.Windows.Forms.Button btnExcluirAluno;
     }
 }

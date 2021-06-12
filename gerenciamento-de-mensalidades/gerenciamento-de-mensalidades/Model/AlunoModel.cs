@@ -62,6 +62,69 @@ namespace gerenciamento_de_mensalidades.Model
         public string CursoMatriculado { get => cursoMatriculado; set => cursoMatriculado = value; }
         public string Contato { get => contato; set => contato = value; }
 
+        public List<AlunoModel> ListarAlunos(String pesquisa, String curso)
+        {
+            List<AlunoModel> alunos = new List<AlunoModel>();
+
+            MySqlConnection con = DbConnection.getConnection();
+            String query = "SELECT * FROM tb_alunos";
+
+            query += pesquisa == "" && (curso == "Todos os Cursos" || curso == "") ? "" : " WHERE ";
+
+            query += pesquisa != "" ? "nome_completo LIKE ?nome_completo OR RA LIKE ?RA" : "";
+
+            query += pesquisa != "" && (curso != "Todos os Cursos" && curso != "") ? " AND " : "";
+
+            query += curso != "Todos os Cursos" && curso != "" ? "curso_matriculado = ?curso_matriculado" : "";
+
+            query += " ORDER BY nome_completo";
+
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+
+                if (pesquisa != "")
+                {
+                    cmd.Parameters.Add("?nome_completo", MySqlDbType.VarChar).Value = "%" + pesquisa + "%";
+                    cmd.Parameters.Add("?RA", MySqlDbType.VarChar).Value = "%" + pesquisa + "%";
+                }
+
+                if (curso != "Todos os Cursos" && curso != "")
+                    cmd.Parameters.Add("?curso_matriculado", MySqlDbType.VarChar).Value = curso;
+
+                MySqlDataReader mysqlDR = cmd.ExecuteReader();
+
+                if (mysqlDR != null)
+                    while (mysqlDR.Read())
+                    {
+                        AlunoModel aluno = new AlunoModel();
+                        aluno.IdAluno = Convert.ToInt32(mysqlDR["id_aluno"]);
+                        aluno.Nome = mysqlDR["nome_completo"].ToString();
+                        aluno.RA = Convert.ToInt32(mysqlDR["RA"]);
+                        aluno.DataNascimento = Convert.ToDateTime(mysqlDR["data_nascimento"]);
+                        aluno.CPF = mysqlDR["CPF"].ToString();
+                        aluno.CursoMatriculado = mysqlDR["curso_matriculado"].ToString();
+                        aluno.Contato = mysqlDR["contato"].ToString();
+                        aluno.TipoUsuario = TipoUsuario.Aluno;
+                        aluno.IdUsuario = mysqlDR["id_usuario"] != DBNull.Value ? Convert.ToInt32(mysqlDR["id_usuario"]) : 0;
+                        alunos.Add(aluno);
+                    }
+
+                return alunos;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Falha ao listar alunos, tente novamente mais tarde\n"+e, "Erro na conexão com o servidor",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return alunos;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public AlunoModel BuscarAlunoPorRA()
         {
             AlunoModel aluno = new AlunoModel();
@@ -87,7 +150,7 @@ namespace gerenciamento_de_mensalidades.Model
                     aluno.CursoMatriculado = mysqlDR["curso_matriculado"].ToString();
                     aluno.Contato = mysqlDR["contato"].ToString();
                     aluno.TipoUsuario = TipoUsuario.Aluno;
-                    aluno.IdAluno = mysqlDR["id_usuario"] != DBNull.Value ? Convert.ToInt32(mysqlDR["id_usuario"]) : 0;
+                    aluno.IdUsuario = mysqlDR["id_usuario"] != DBNull.Value ? Convert.ToInt32(mysqlDR["id_usuario"]) : 0;
                     return aluno;
                 }
                 else
@@ -213,6 +276,33 @@ namespace gerenciamento_de_mensalidades.Model
             catch
             {
                 MessageBox.Show("Não foi possível editar o aluno, tente novamente mais tarde", "Erro ao editar",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public Boolean ExcluirAluno()
+        {
+            MySqlConnection con = DbConnection.getConnection();
+            String query = "DELETE FROM tb_alunos WHERE RA = ?RA";
+
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.Add("?RA", MySqlDbType.Int32).Value = RA;
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possível excluir o aluno, tente novamente mais tarde", "Erro ao excluir aluno",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
