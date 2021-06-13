@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaInicialAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -136,6 +137,7 @@
             this.btnSolicitacoes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSolicitacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnSolicitacoes.Image = ((System.Drawing.Image)(resources.GetObject("btnSolicitacoes.Image")));
             this.btnSolicitacoes.Location = new System.Drawing.Point(444, 311);
             this.btnSolicitacoes.Name = "btnSolicitacoes";
             this.btnSolicitacoes.Size = new System.Drawing.Size(114, 100);
@@ -151,6 +153,7 @@
             this.btnAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlunos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnAlunos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlunos.Image")));
             this.btnAlunos.Location = new System.Drawing.Point(256, 311);
             this.btnAlunos.Name = "btnAlunos";
             this.btnAlunos.Size = new System.Drawing.Size(114, 100);
@@ -166,6 +169,7 @@
             this.btnMeuPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMeuPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMeuPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnMeuPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnMeuPerfil.Image")));
             this.btnMeuPerfil.Location = new System.Drawing.Point(71, 311);
             this.btnMeuPerfil.Name = "btnMeuPerfil";
             this.btnMeuPerfil.Size = new System.Drawing.Size(114, 100);
@@ -234,7 +238,7 @@
             this.lblTotalDividaAlunos.AutoSize = true;
             this.lblTotalDividaAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalDividaAlunos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTotalDividaAlunos.Location = new System.Drawing.Point(56, 16);
+            this.lblTotalDividaAlunos.Location = new System.Drawing.Point(75, 16);
             this.lblTotalDividaAlunos.Name = "lblTotalDividaAlunos";
             this.lblTotalDividaAlunos.Size = new System.Drawing.Size(88, 39);
             this.lblTotalDividaAlunos.TabIndex = 2;
@@ -245,7 +249,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(3, 16);
+            this.label9.Location = new System.Drawing.Point(15, 16);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 39);
             this.label9.TabIndex = 2;
@@ -257,6 +261,7 @@
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
             this.btnUsuarios.Location = new System.Drawing.Point(623, 311);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(114, 100);

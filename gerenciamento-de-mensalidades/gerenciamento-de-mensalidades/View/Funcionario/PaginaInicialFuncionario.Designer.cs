@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaInicialFuncionario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -99,6 +100,7 @@
             this.btnSolicitacoes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSolicitacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnSolicitacoes.Image = ((System.Drawing.Image)(resources.GetObject("btnSolicitacoes.Image")));
             this.btnSolicitacoes.Location = new System.Drawing.Point(648, 304);
             this.btnSolicitacoes.Name = "btnSolicitacoes";
             this.btnSolicitacoes.Size = new System.Drawing.Size(114, 100);
@@ -114,6 +116,7 @@
             this.btnAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlunos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlunos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnAlunos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlunos.Image")));
             this.btnAlunos.Location = new System.Drawing.Point(473, 304);
             this.btnAlunos.Name = "btnAlunos";
             this.btnAlunos.Size = new System.Drawing.Size(114, 100);
@@ -129,6 +132,7 @@
             this.btnMeuPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMeuPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMeuPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnMeuPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnMeuPerfil.Image")));
             this.btnMeuPerfil.Location = new System.Drawing.Point(121, 304);
             this.btnMeuPerfil.Name = "btnMeuPerfil";
             this.btnMeuPerfil.Size = new System.Drawing.Size(114, 100);
@@ -221,6 +225,7 @@
             this.btnCadastrarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.btnCadastrarAluno.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAluno.Image")));
             this.btnCadastrarAluno.Location = new System.Drawing.Point(305, 304);
             this.btnCadastrarAluno.Name = "btnCadastrarAluno";
             this.btnCadastrarAluno.Size = new System.Drawing.Size(114, 100);
