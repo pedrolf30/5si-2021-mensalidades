@@ -202,7 +202,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Name = "MensalidadesAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MensalidadesAluno";
+            this.Text = "Mensalidades Aluno";
             this.Load += new System.EventHandler(this.MensalidadesAluno_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

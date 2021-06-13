@@ -41,7 +41,7 @@
   # após a inicialização do Apache e do MySQL acesse esse endereço abaixo no seu 
   # navegador e cole (CTRL + V) o conteúdo copiado do arquivo database.sql no espaço para 
   # consulta e execute o código
-  http://localhost/phpmyadmin/server_sql.php
+  http://localhost:8080/phpmyadmin/server_sql.php
   
   # você também pode escolher armazer o conteúdo do arquivo database.sql em um ambiente 
   # de sua escolha (eg. MySQL Workbench), apenas lembre de   
@@ -54,8 +54,14 @@
   Pré-requisitos: [Visual Studio](https://visualstudio.microsoft.com/pt-br/)
 
   ```bash
-  # entre na solução do projeto pelo Visual Studio e inicie o projeto
-  gerenciamento-de-mensalidades\gerenciamento-de-mensalidades.sln
+  # clonar repositório
+  https://github.com/pedrolf30/gerenciamento-de-mensalidades.git
+  
+  # entre na pasta do projeto
+  cd gerenciamento-de-mensalidades\gerenciamento-de-mensalidades\bin\Debug
+  
+  # executar o projeto
+  gerenciamento-de-vendas.exe
   ```
 
   ## Faça login utilizando uma das contas de usuário abaixo

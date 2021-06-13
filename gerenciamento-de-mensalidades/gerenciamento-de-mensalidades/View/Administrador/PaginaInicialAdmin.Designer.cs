@@ -301,7 +301,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "PaginaInicialAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PaginaInicialAdmin";
+            this.Text = "Pagina Inicial";
             this.Load += new System.EventHandler(this.PaginaInicialAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

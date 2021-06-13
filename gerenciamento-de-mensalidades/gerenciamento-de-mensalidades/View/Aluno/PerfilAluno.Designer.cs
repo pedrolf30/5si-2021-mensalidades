@@ -868,7 +868,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "PerfilAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PerfilAluno";
+            this.Text = "Perfil";
             this.Load += new System.EventHandler(this.PerfilAluno_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

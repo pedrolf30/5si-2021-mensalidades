@@ -252,7 +252,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "PaginaInicialFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PaginaInicialFuncionario";
+            this.Text = "Pagina Inicial";
             this.Load += new System.EventHandler(this.PaginaInicialFuncionario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

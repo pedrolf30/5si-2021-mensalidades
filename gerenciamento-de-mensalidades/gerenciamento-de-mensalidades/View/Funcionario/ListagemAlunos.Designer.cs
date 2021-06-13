@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.lblNomeUsuario = new System.Windows.Forms.Label();
@@ -159,8 +159,8 @@
             // 
             // Nome
             // 
-            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Nome.DefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Nome.DefaultCellStyle = dataGridViewCellStyle1;
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
@@ -175,9 +175,9 @@
             // 
             // Nascimento
             // 
-            dataGridViewCellStyle56.Format = "d";
-            dataGridViewCellStyle56.NullValue = null;
-            this.Nascimento.DefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Nascimento.DefaultCellStyle = dataGridViewCellStyle2;
             this.Nascimento.HeaderText = "Nascimento";
             this.Nascimento.Name = "Nascimento";
             this.Nascimento.ReadOnly = true;
@@ -192,8 +192,8 @@
             // 
             // Curso
             // 
-            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Curso.DefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Curso.DefaultCellStyle = dataGridViewCellStyle3;
             this.Curso.HeaderText = "Curso";
             this.Curso.Name = "Curso";
             this.Curso.ReadOnly = true;
@@ -201,8 +201,8 @@
             // 
             // Contato
             // 
-            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Contato.DefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Contato.DefaultCellStyle = dataGridViewCellStyle4;
             this.Contato.HeaderText = "Contato";
             this.Contato.Name = "Contato";
             this.Contato.ReadOnly = true;
@@ -223,8 +223,8 @@
             // 
             // numMensalidadesAtrasadas
             // 
-            dataGridViewCellStyle59.NullValue = null;
-            this.numMensalidadesAtrasadas.DefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle5.NullValue = null;
+            this.numMensalidadesAtrasadas.DefaultCellStyle = dataGridViewCellStyle5;
             this.numMensalidadesAtrasadas.HeaderText = "Nº Mensalidades Atrasadas";
             this.numMensalidadesAtrasadas.Name = "numMensalidadesAtrasadas";
             this.numMensalidadesAtrasadas.ReadOnly = true;
@@ -232,9 +232,9 @@
             // 
             // valorTotalDivida
             // 
-            dataGridViewCellStyle60.Format = "C2";
-            dataGridViewCellStyle60.NullValue = null;
-            this.valorTotalDivida.DefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.valorTotalDivida.DefaultCellStyle = dataGridViewCellStyle6;
             this.valorTotalDivida.HeaderText = "Valor Total Dívida";
             this.valorTotalDivida.Name = "valorTotalDivida";
             this.valorTotalDivida.ReadOnly = true;
@@ -464,18 +464,18 @@
             // 
             // Valor
             // 
-            dataGridViewCellStyle61.Format = "C2";
-            dataGridViewCellStyle61.NullValue = null;
-            this.Valor.DefaultCellStyle = dataGridViewCellStyle61;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.Valor.DefaultCellStyle = dataGridViewCellStyle7;
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
             this.Valor.ReadOnly = true;
             // 
             // DataVencimento
             // 
-            dataGridViewCellStyle62.Format = "d";
-            dataGridViewCellStyle62.NullValue = null;
-            this.DataVencimento.DefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle8.Format = "d";
+            dataGridViewCellStyle8.NullValue = null;
+            this.DataVencimento.DefaultCellStyle = dataGridViewCellStyle8;
             this.DataVencimento.HeaderText = "Data Vencimento";
             this.DataVencimento.Name = "DataVencimento";
             this.DataVencimento.ReadOnly = true;
@@ -489,9 +489,9 @@
             // 
             // DataPagamento
             // 
-            dataGridViewCellStyle63.Format = "d";
-            dataGridViewCellStyle63.NullValue = "** Não Pago **";
-            this.DataPagamento.DefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle9.Format = "d";
+            dataGridViewCellStyle9.NullValue = "** Não Pago **";
+            this.DataPagamento.DefaultCellStyle = dataGridViewCellStyle9;
             this.DataPagamento.HeaderText = "Data Pagamento";
             this.DataPagamento.Name = "DataPagamento";
             this.DataPagamento.ReadOnly = true;
@@ -713,7 +713,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Name = "ListagemAlunos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListagemAlunos";
+            this.Text = "Listagem Alunos";
             this.Load += new System.EventHandler(this.ListagemAlunos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

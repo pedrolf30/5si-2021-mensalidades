@@ -28,18 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.rtbDescricao = new System.Windows.Forms.RichTextBox();
             this.lblDesc = new System.Windows.Forms.Label();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.dgvSolicitacoes = new System.Windows.Forms.DataGridView();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataSolicitação = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AtendidoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Resposta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,12 +61,6 @@
             this.lblAtendidoPor = new System.Windows.Forms.Label();
             this.rtbResposta = new System.Windows.Forms.RichTextBox();
             this.lblResposta = new System.Windows.Forms.Label();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataSolicitação = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AtendidoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Resposta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitacoes)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -155,6 +155,61 @@
             this.dgvSolicitacoes.Size = new System.Drawing.Size(707, 334);
             this.dgvSolicitacoes.TabIndex = 67;
             this.dgvSolicitacoes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSolicitacoes_CellClick);
+            // 
+            // Categoria
+            // 
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Categoria.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
+            // Descrição
+            // 
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Descrição.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Descrição.HeaderText = "Descrição";
+            this.Descrição.Name = "Descrição";
+            this.Descrição.ReadOnly = true;
+            this.Descrição.Width = 130;
+            // 
+            // DataSolicitação
+            // 
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.DataSolicitação.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DataSolicitação.HeaderText = "Data Solicitação";
+            this.DataSolicitação.Name = "DataSolicitação";
+            this.DataSolicitação.ReadOnly = true;
+            this.DataSolicitação.Width = 125;
+            // 
+            // Status
+            // 
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Status.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Width = 60;
+            // 
+            // AtendidoPor
+            // 
+            dataGridViewCellStyle5.NullValue = "*Não Atendido*";
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AtendidoPor.DefaultCellStyle = dataGridViewCellStyle5;
+            this.AtendidoPor.HeaderText = "Atendido Por";
+            this.AtendidoPor.Name = "AtendidoPor";
+            this.AtendidoPor.ReadOnly = true;
+            // 
+            // Resposta
+            // 
+            dataGridViewCellStyle6.NullValue = "*Sem Resposta*";
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Resposta.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Resposta.HeaderText = "Resposta";
+            this.Resposta.Name = "Resposta";
+            this.Resposta.ReadOnly = true;
+            this.Resposta.Width = 130;
             // 
             // cbStatus
             // 
@@ -345,61 +400,6 @@
             this.lblResposta.Text = "Resposta:";
             this.lblResposta.Visible = false;
             // 
-            // Categoria
-            // 
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Categoria.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // Descrição
-            // 
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Descrição.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Descrição.HeaderText = "Descrição";
-            this.Descrição.Name = "Descrição";
-            this.Descrição.ReadOnly = true;
-            this.Descrição.Width = 130;
-            // 
-            // DataSolicitação
-            // 
-            dataGridViewCellStyle9.Format = "d";
-            dataGridViewCellStyle9.NullValue = null;
-            this.DataSolicitação.DefaultCellStyle = dataGridViewCellStyle9;
-            this.DataSolicitação.HeaderText = "Data Solicitação";
-            this.DataSolicitação.Name = "DataSolicitação";
-            this.DataSolicitação.ReadOnly = true;
-            this.DataSolicitação.Width = 125;
-            // 
-            // Status
-            // 
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Status.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Width = 60;
-            // 
-            // AtendidoPor
-            // 
-            dataGridViewCellStyle11.NullValue = "*Não Atendido*";
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AtendidoPor.DefaultCellStyle = dataGridViewCellStyle11;
-            this.AtendidoPor.HeaderText = "Atendido Por";
-            this.AtendidoPor.Name = "AtendidoPor";
-            this.AtendidoPor.ReadOnly = true;
-            // 
-            // Resposta
-            // 
-            dataGridViewCellStyle12.NullValue = "*Sem Resposta*";
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Resposta.DefaultCellStyle = dataGridViewCellStyle12;
-            this.Resposta.HeaderText = "Resposta";
-            this.Resposta.Name = "Resposta";
-            this.Resposta.ReadOnly = true;
-            this.Resposta.Width = 130;
-            // 
             // SolicitacoesAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,7 +427,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "SolicitacoesAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SolicitacoesAluno";
+            this.Text = "Solicitações";
             this.Load += new System.EventHandler(this.SolicitacoesAluno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitacoes)).EndInit();
             this.panel1.ResumeLayout(false);
